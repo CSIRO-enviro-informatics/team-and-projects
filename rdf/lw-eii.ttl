@@ -6,6 +6,7 @@
 # imports: http://www.w3.org/ns/project
 
 @prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix eii: <http://id.csiro.au/dataset/lw-eii/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix org: <http://www.w3.org/ns/org#> .
@@ -23,7 +24,7 @@
 
 <http://id.csiro.au/dataset/lw-eii>
   rdf:type owl:Ontology ;
-  owl:imports <http://purl.org/dc/terms/> ;
+  owl:imports dcterms: ;
   owl:imports <http://registry.it.csiro.au/ont/norg> ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:imports <http://www.w3.org/ns/adms> ;
@@ -32,6 +33,7 @@
 eii:CKAN
   rdf:type eii:Technology ;
   rdfs:label "CKAN" ;
+  prov:wasAttributedTo xorg:OpenKnowledge ;
   foaf:homepage <https://ckan.org/> ;
 .
 eii:CKAN-DCAT
@@ -42,22 +44,26 @@ eii:CKAN-DCAT
 eii:DCAT-2014
   rdf:type eii:Technology ;
   rdfs:label "W3C Data Catalog" ;
+  prov:wasAttributedTo xorg:W3C ;
   foaf:homepage <https://www.w3.org/TR/vocab-dcat/> ;
 .
 eii:DCAT-rev
   rdf:type eii:Technology ;
   rdfs:label "W3C Data Catalog - revision" ;
+  prov:wasAttributedTo xorg:W3C ;
   prov:wasDerivedFrom eii:DCAT-2014 ;
   foaf:homepage <https://w3c.github.io/dxwg/dcat/> ;
 .
 eii:DWC
   rdf:type eii:Technology ;
   rdfs:label "Darwin Core" ;
+  prov:wasAttributedTo xorg:TDWG ;
   foaf:homepage <http://rs.tdwg.org/dwc/terms/> ;
 .
 eii:DataRatings
   rdf:type eii:Technology ;
   rdfs:label "CSIRO Data Ratings" ;
+  prov:wasAttributedTo orgunit:EII ;
   foaf:homepage <https://confluence.csiro.au/display/OZNOME/Data+ratings> ;
 .
 eii:ENVO
@@ -73,16 +79,19 @@ eii:FAIR
 eii:FiveStar
   rdf:type eii:Technology ;
   rdfs:label "5-star data sharing assessment" ;
+  prov:wasAttributedTo orgunit:EII ;
   prov:wasDerivedFrom eii:DataRatings ;
   foaf:homepage <http://oznome.csiro.au/5star/> ;
 .
 eii:KN
   rdf:type eii:Technology ;
   rdfs:label "Knowledge Network" ;
+  prov:wasAttributedTo orgunit:EII ;
 .
 eii:LDR
   rdf:type eii:Technology ;
   rdfs:label "Linked Data Registry" ;
+  prov:wasAttributedTo xorg:Epimorphics ;
   foaf:homepage <https://github.com/UKGovLD/registry-core> ;
 .
 eii:OBO
@@ -93,38 +102,46 @@ eii:OBO
 eii:OandM
   rdf:type eii:Technology ;
   rdfs:label "OGC Observations and Measurements" ;
+  prov:wasAttributedTo xorg:OGC ;
   foaf:homepage <http://www.opengeospatial.org/standards/om> ;
 .
 eii:PROMS
   rdf:type eii:Technology ;
   rdfs:label "PROMS" ;
   prov:wasDerivedFrom eii:PROV-O ;
+  prov:wasGeneratedBy project:BA ;
   foaf:homepage <https://promsns.org/def/proms/proms.html> ;
 .
 eii:PROV-O
   rdf:type eii:Technology ;
   rdfs:label "W3C Provenance Ontology" ;
+  prov:wasAttributedTo xorg:W3C ;
   foaf:homepage <https://www.w3.org/TR/prov-o/> ;
 .
 eii:ProfDesc
   rdf:type eii:Technology ;
   rdfs:label "Profiling standards - description" ;
+  prov:wasAttributedTo xorg:DXWG ;
   foaf:homepage <https://github.com/w3c/dxwg/tree/gh-pages/profiledesc> ;
 .
 eii:RDA
   rdf:type eii:Technology ;
   rdfs:label "Research Data Australia" ;
+  prov:wasAttributedTo xorg:ANDS ;
   foaf:homepage <https://researchdata.ands.org.au/> ;
 .
 eii:RVA
   rdf:type eii:Technology ;
   rdfs:label "Research Vocabularies Australia" ;
+  prov:wasAttributedTo xorg:ANDS ;
   prov:wasDerivedFrom eii:SISSvoc ;
   foaf:homepage <https://vocabs.ands.org.au/> ;
 .
 eii:SISSvoc
   rdf:type eii:Technology ;
   rdfs:label "SISSvoc" ;
+  prov:wasAttributedTo <http://id.csiro.au/person/jonathan.yu> ;
+  prov:wasAttributedTo <http://id.csiro.au/person/simon.cox> ;
   prov:wasDerivedFrom eii:SKOS ;
   foaf:homepage <https://github.com/SISS/SISSVoc> ;
 .
@@ -137,23 +154,27 @@ eii:SISSvoc-explorer
 eii:SKOS
   rdf:type eii:Technology ;
   rdfs:label "Simple Knowledge Organization System" ;
+  prov:wasAttributedTo xorg:W3C ;
   foaf:homepage <https://www.w3.org/2004/02/skos/> ;
 .
 eii:SOSA
   rdf:type eii:Technology ;
   rdfs:label "W3C Sensors Observations Sampling and Actuation vocabulary" ;
+  prov:wasAttributedTo xorg:W3C ;
   prov:wasDerivedFrom eii:OandM ;
   foaf:homepage <https://www.w3.org/TR/vocab-ssn/> ;
 .
 eii:SSN
   rdf:type eii:Technology ;
   rdfs:label "W3C Semantic Sensor Network Ontology" ;
+  prov:wasAttributedTo xorg:W3C ;
   prov:wasDerivedFrom eii:SOSA ;
   foaf:homepage <https://www.w3.org/TR/vocab-ssn/> ;
 .
 eii:SSN-ext
   rdf:type eii:Technology ;
   rdfs:label "SSN extensions" ;
+  prov:wasAttributedTo <http://id.csiro.au/person/simon.cox> ;
   prov:wasDerivedFrom eii:SOSA ;
   prov:wasDerivedFrom eii:SSN ;
   foaf:homepage <https://w3c.github.io/sdw/proposals/ssn-extensions/> ;
@@ -161,6 +182,8 @@ eii:SSN-ext
 eii:SWEET
   rdf:type eii:Technology ;
   rdfs:label "Semantic Web for Earth and Environmental Terminology " ;
+  prov:wasAttributedTo xorg:ESIP ;
+  prov:wasAttributedTo xorg:NASA ;
   foaf:homepage <https://github.com/ESIPFed/sweet/> ;
 .
 eii:Technology
@@ -171,41 +194,61 @@ eii:Technology
 eii:e2ldr
   rdf:type eii:Technology ;
   rdfs:label "Excel2LDR" ;
+  prov:wasAttributedTo orgunit:EII ;
 .
 eii:rdf4j
   rdf:type eii:Technology ;
   rdfs:label "RDF4J - formerly known as Sesame" ;
+  foaf:homepage <http://rdf4j.org/> ;
 .
 xorg:AGLDWG
   rdf:type org:OrganizationalCollaboration ;
+  rdf:type prov:Organization ;
   rdfs:label "Australian Government Linked Data Working Group" ;
+  foaf:homepage <http://linked.data.gov.au/> ;
 .
 xorg:ALA
   rdf:type org:FormalOrganization ;
+  rdf:type prov:Organization ;
   rdfs:label "Atlas of Living Australia" ;
+  foaf:homepage <https://www.ala.org.au/> ;
 .
 xorg:ANDS
   rdf:type org:FormalOrganization ;
+  rdf:type prov:Organization ;
   rdfs:label "Australian National Data Service" ;
+  foaf:homepage <https://www.ands.org.au/> ;
 .
 xorg:AuScope
   rdf:type org:FormalOrganization ;
+  rdf:type prov:Organization ;
   rdfs:label "AuScope" ;
+  foaf:homepage <http://www.auscope.org.au/> ;
 .
 xorg:BOM
   rdf:type org:FormalOrganization ;
+  rdf:type prov:Organization ;
+  dcterms:identifier <http://test.linked.data.gov.au/org/O-000843> ;
   rdfs:label "Bureau of Meteorology" ;
+  foaf:homepage <http://www.bom.gov.au/> ;
 .
 xorg:DOEE
   rdf:type org:FormalOrganization ;
+  rdf:type prov:Organization ;
+  dcterms:identifier <http://test.linked.data.gov.au/org/O-000841> ;
   rdfs:label "Department of the Environment and Energy" ;
+  foaf:homepage <https://www.environment.gov.au/> ;
 .
 xorg:DXWG
   rdf:type org:Organization ;
+  rdf:type prov:Organization ;
   rdfs:label "W3C Data eXchange Working Group" ;
+  org:unitOf xorg:W3C ;
+  foaf:homepage <https://www.w3.org/2017/dxwg/wiki/Main_Page> ;
 .
 xorg:E2SIP
   rdf:type org:OrganizationalCollaboration ;
+  rdf:type prov:Organization ;
   rdfs:label "Earth and Environment Science Information Partners" ;
   org:hasMember xorg:ALA ;
   org:hasMember xorg:ANDS ;
@@ -216,69 +259,138 @@ xorg:E2SIP
   org:hasMember xorg:NCI ;
   org:hasMember xorg:TERN ;
   org:hasMember orgunit:CSIRO ;
+  foaf:homepage <https://confluence.csiro.au/display/E2SIP/Earth+and+Environment+Science+Information+Partners> ;
 .
 xorg:ESIP
   rdf:type org:FormalOrganization ;
+  rdf:type prov:Organization ;
   rdfs:label "Earth Science Information Partners" ;
   org:linkedTo xorg:NASA ;
   org:linkedTo xorg:NOAA ;
   org:linkedTo xorg:USGS ;
+  foaf:homepage <http://esipfed.org/> ;
+.
+xorg:Epimorphics
+  rdf:type org:FormalOrganization ;
+  rdf:type prov:Organization ;
+  rdfs:label "Epimorphics " ;
+  foaf:homepage <https://www.epimorphics.com/> ;
 .
 xorg:GA
   rdf:type org:FormalOrganization ;
+  rdf:type prov:Organization ;
+  dcterms:identifier <http://test.linked.data.gov.au/org/O-000887> ;
   rdfs:label "Geoscience Australia" ;
+  foaf:homepage <http://www.ga.gov.au/> ;
 .
 xorg:IMOS
   rdf:type org:FormalOrganization ;
+  rdf:type prov:Organization ;
   rdfs:label "Integrated Marine Observing System" ;
+  org:memberOf xorg:ESIP ;
+  foaf:homepage <http://imos.org.au/> ;
 .
 xorg:NASA
   rdf:type org:FormalOrganization ;
+  rdf:type prov:Organization ;
   rdfs:label "National Aeronautics and Space Administration" ;
+  foaf:homepage <https://www.nasa.gov/> ;
 .
 xorg:NCI
   rdf:type org:FormalOrganization ;
+  rdf:type prov:Organization ;
   rdfs:label "National Computational Infrastructure" ;
+  foaf:homepage <http://nci.org.au/> ;
 .
 xorg:NOAA
   rdf:type org:FormalOrganization ;
+  rdf:type prov:Organization ;
   rdfs:label "National Oceanic and Atmospheric Administration" ;
+  foaf:homepage <http://www.noaa.gov/> ;
+.
+xorg:OGC
+  rdf:type org:FormalOrganization ;
+  rdf:type prov:Organization ;
+  rdfs:label "Open Geospatial Consortium" ;
+  foaf:homepage <http://www.opengeospatial.org/> ;
+.
+xorg:OpenKnowledge
+  rdf:type org:FormalOrganization ;
+  rdf:type prov:Organization ;
+  rdfs:label "Open Knowledge International" ;
+  foaf:homepage <https://okfn.org/> ;
+.
+xorg:RDA
+  rdf:type org:FormalOrganization ;
+  rdf:type prov:Organization ;
+  rdfs:label "Research Data Alliance" ;
+  foaf:homepage <https://www.rd-alliance.org/> ;
+.
+xorg:SeaDataNet
+  rdf:type org:Organization ;
+  rdf:type prov:Organization ;
+  rdfs:label "SeaDataNet" ;
+  foaf:homepage <https://www.seadatanet.org/> ;
+.
+xorg:TDWG
+  rdf:type org:Organization ;
+  rdf:type prov:Organization ;
+  rdfs:label "Biodiversity Information Standards (TDWG)" ;
+  foaf:homepage <http://www.tdwg.org/> ;
 .
 xorg:TERN
   rdf:type org:FormalOrganization ;
+  rdf:type prov:Organization ;
   rdfs:label "Terrestrial Ecosystems Research Network" ;
+  foaf:homepage <http://tern.org.au/> ;
 .
 xorg:USGS
   rdf:type org:FormalOrganization ;
+  rdf:type prov:Organization ;
   rdfs:label "US Geological Survey" ;
+  foaf:homepage <https://www.usgs.gov/> ;
+.
+xorg:W3C
+  rdf:type org:FormalOrganization ;
+  rdf:type prov:Organization ;
+  rdfs:label "World Wide Web Consortium" ;
+  foaf:homepage <https://www.w3.org/> ;
 .
 orgunit:CSIRO
   rdf:type org:FormalOrganization ;
+  rdf:type prov:Organization ;
+  dcterms:identifier <http://test.linked.data.gov.au/org/O-000886> ;
   rdfs:label "Commonwealth Scientific and Industrial Research Organisation" ;
   org:hasUnit orgunit:Energy ;
   org:hasUnit orgunit:LW ;
+  foaf:homepage <https://www.csiro.au/> ;
 .
 orgunit:EI
   rdf:type org:OrganizationalUnit ;
+  rdf:type prov:Organization ;
   rdfs:label "Environmental Informatics group" ;
   org:hasUnit orgunit:EII ;
 .
 orgunit:EII
   rdf:type org:OrganizationalUnit ;
+  rdf:type prov:Organization ;
   rdf:type foaf:Group ;
   rdfs:label "Environmental Information Infrastructure team" ;
 .
 orgunit:Energy
   rdf:type org:OrganizationalUnit ;
+  rdf:type prov:Organization ;
   rdfs:label "Energy business unit" ;
 .
 orgunit:LW
   rdf:type org:OrganizationalUnit ;
+  rdf:type prov:Organization ;
   rdfs:label "Land and Water business unit" ;
   org:hasUnit orgunit:WRM ;
 .
 orgunit:WRM
   rdf:type org:OrganizationalUnit ;
+  rdf:type prov:Organization ;
   rdfs:label "Water Resource Management program" ;
   org:hasUnit orgunit:EI ;
 .
