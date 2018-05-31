@@ -546,6 +546,11 @@ project:CODATA
   proj:plannedStartTime "2017-07-01T00:00:00"^^xsd:dateTime ;
   prov:startedAtTime "2017-06-19T00:00:00"^^xsd:dateTime ;
 .
+project:CRISP
+  rdf:type proj:Project ;
+  rdfs:label "CRISP" ;
+  proj:hasParticipant <http://id.csiro.au/person/paul.j.box> ;
+.
 project:DAMC
   rdf:type proj:Project ;
   rdfs:label "L&W Data Access and Management Committee" ;
@@ -581,6 +586,12 @@ project:DataGovernance
   proj:hasParticipant <http://id.csiro.au/person/david.lemon> ;
   proj:hasParticipant <http://id.csiro.au/person/paul.j.box> ;
   proj:hasSponsor orgunit:CSIRO ;
+.
+project:EPBC
+  rdf:type proj:Project ;
+  rdfs:label "EPBC" ;
+  proj:hasLeader <http://id.csiro.au/person/paul.j.box> ;
+  proj:hasParticipant <http://id.csiro.au/person/paul.j.box> ;
 .
 project:EUDM-WS5
   rdf:type proj:Project ;
