@@ -1,0 +1,519 @@
+# baseURI: http://id.csiro.au/dataset/lw-eii
+# imports: http://purl.org/dc/terms/
+# imports: http://registry.it.csiro.au/ont/norg
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://www.w3.org/ns/adms
+# imports: http://www.w3.org/ns/project
+
+@prefix adms: <http://www.w3.org/ns/adms#> .
+@prefix eii: <http://id.csiro.au/dataset/lw-eii/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix org: <http://www.w3.org/ns/org#> .
+@prefix orgunit: <http://id.csiro.au/orgunit/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix person: <http://id.csiro.au/person/> .
+@prefix proj: <http://www.w3.org/ns/project#> .
+@prefix project: <http://id.csiro.au/project/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xorg: <http://id.csiro.au/org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://id.csiro.au/dataset/lw-eii>
+  rdf:type owl:Ontology ;
+  owl:imports <http://purl.org/dc/terms/> ;
+  owl:imports <http://registry.it.csiro.au/ont/norg> ;
+  owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  owl:imports <http://www.w3.org/ns/adms> ;
+  owl:imports <http://www.w3.org/ns/project> ;
+.
+eii:CKAN
+  rdf:type eii:Technology ;
+  rdfs:label "CKAN" ;
+  foaf:homepage <https://ckan.org/> ;
+.
+eii:CKAN-DCAT
+  rdf:type eii:Technology ;
+  rdfs:label "DCAT plugin for CKAN" ;
+  foaf:homepage <https://github.com/ckan/ckanext-dcat> ;
+.
+eii:DCAT-2014
+  rdf:type eii:Technology ;
+  rdfs:label "W3C Data Catalog" ;
+  foaf:homepage <https://www.w3.org/TR/vocab-dcat/> ;
+.
+eii:DCAT-rev
+  rdf:type eii:Technology ;
+  rdfs:label "W3C Data Catalog - revision" ;
+  prov:wasDerivedFrom eii:DCAT-2014 ;
+  foaf:homepage <https://w3c.github.io/dxwg/dcat/> ;
+.
+eii:DWC
+  rdf:type eii:Technology ;
+  rdfs:label "Darwin Core" ;
+  foaf:homepage <http://rs.tdwg.org/dwc/terms/> ;
+.
+eii:DataRatings
+  rdf:type eii:Technology ;
+  rdfs:label "CSIRO Data Ratings" ;
+  foaf:homepage <https://confluence.csiro.au/display/OZNOME/Data+ratings> ;
+.
+eii:ENVO
+  rdf:type eii:Technology ;
+  rdfs:label "Environment Ontology" ;
+  foaf:homepage <http://environmentontology.org/> ;
+.
+eii:FAIR
+  rdf:type eii:Technology ;
+  rdfs:label "Findable, Accessible, Interoperable & Reusable" ;
+  foaf:homepage <https://www.go-fair.org/> ;
+.
+eii:FiveStar
+  rdf:type eii:Technology ;
+  rdfs:label "5-star data sharing assessment" ;
+  prov:wasDerivedFrom eii:DataRatings ;
+  foaf:homepage <http://oznome.csiro.au/5star/> ;
+.
+eii:KN
+  rdf:type eii:Technology ;
+  rdfs:label "Knowledge Network" ;
+.
+eii:LDR
+  rdf:type eii:Technology ;
+  rdfs:label "Linked Data Registry" ;
+  foaf:homepage <https://github.com/UKGovLD/registry-core> ;
+.
+eii:OBO
+  rdf:type eii:Technology ;
+  rdfs:label "OBO Foundry biomedical ontologies" ;
+  foaf:homepage <http://www.obofoundry.org/> ;
+.
+eii:OandM
+  rdf:type eii:Technology ;
+  rdfs:label "OGC Observations and Measurements" ;
+  foaf:homepage <http://www.opengeospatial.org/standards/om> ;
+.
+eii:PROMS
+  rdf:type eii:Technology ;
+  rdfs:label "PROMS" ;
+  prov:wasDerivedFrom eii:PROV-O ;
+  foaf:homepage <https://promsns.org/def/proms/proms.html> ;
+.
+eii:PROV-O
+  rdf:type eii:Technology ;
+  rdfs:label "W3C Provenance Ontology" ;
+  foaf:homepage <https://www.w3.org/TR/prov-o/> ;
+.
+eii:ProfDesc
+  rdf:type eii:Technology ;
+  rdfs:label "Profiling standards - description" ;
+  foaf:homepage <https://github.com/w3c/dxwg/tree/gh-pages/profiledesc> ;
+.
+eii:RDA
+  rdf:type eii:Technology ;
+  rdfs:label "Research Data Australia" ;
+  foaf:homepage <https://researchdata.ands.org.au/> ;
+.
+eii:RVA
+  rdf:type eii:Technology ;
+  rdfs:label "Research Vocabularies Australia" ;
+  prov:wasDerivedFrom eii:SISSvoc ;
+  foaf:homepage <https://vocabs.ands.org.au/> ;
+.
+eii:SISSvoc
+  rdf:type eii:Technology ;
+  rdfs:label "SISSvoc" ;
+  prov:wasDerivedFrom eii:SKOS ;
+  foaf:homepage <https://github.com/SISS/SISSVoc> ;
+.
+eii:SISSvoc-explorer
+  rdf:type eii:Technology ;
+  rdfs:label "SISSvoc explorer" ;
+  prov:wasAttributedTo <http://id.csiro.au/person/jonathan.yu> ;
+  prov:wasDerivedFrom eii:SISSvoc ;
+.
+eii:SKOS
+  rdf:type eii:Technology ;
+  rdfs:label "Simple Knowledge Organization System" ;
+  foaf:homepage <https://www.w3.org/2004/02/skos/> ;
+.
+eii:SOSA
+  rdf:type eii:Technology ;
+  rdfs:label "W3C Sensors Observations Sampling and Actuation vocabulary" ;
+  prov:wasDerivedFrom eii:OandM ;
+  foaf:homepage <https://www.w3.org/TR/vocab-ssn/> ;
+.
+eii:SSN
+  rdf:type eii:Technology ;
+  rdfs:label "W3C Semantic Sensor Network Ontology" ;
+  prov:wasDerivedFrom eii:SOSA ;
+  foaf:homepage <https://www.w3.org/TR/vocab-ssn/> ;
+.
+eii:SSN-ext
+  rdf:type eii:Technology ;
+  rdfs:label "SSN extensions" ;
+  prov:wasDerivedFrom eii:SOSA ;
+  prov:wasDerivedFrom eii:SSN ;
+  foaf:homepage <https://w3c.github.io/sdw/proposals/ssn-extensions/> ;
+.
+eii:SWEET
+  rdf:type eii:Technology ;
+  rdfs:label "Semantic Web for Earth and Environmental Terminology " ;
+  foaf:homepage <https://github.com/ESIPFed/sweet/> ;
+.
+eii:Technology
+  rdf:type owl:Class ;
+  rdfs:label "Technology or component" ;
+  rdfs:subClassOf prov:Entity ;
+.
+eii:e2ldr
+  rdf:type eii:Technology ;
+  rdfs:label "Excel2LDR" ;
+.
+eii:rdf4j
+  rdf:type eii:Technology ;
+  rdfs:label "RDF4J - formerly known as Sesame" ;
+.
+xorg:AGLDWG
+  rdf:type org:OrganizationalCollaboration ;
+  rdfs:label "Australian Government Linked Data Working Group" ;
+.
+xorg:ALA
+  rdf:type org:FormalOrganization ;
+  rdfs:label "Atlas of Living Australia" ;
+.
+xorg:ANDS
+  rdf:type org:FormalOrganization ;
+  rdfs:label "Australian National Data Service" ;
+.
+xorg:AuScope
+  rdf:type org:FormalOrganization ;
+  rdfs:label "AuScope" ;
+.
+xorg:BOM
+  rdf:type org:FormalOrganization ;
+  rdfs:label "Bureau of Meteorology" ;
+.
+xorg:DOEE
+  rdf:type org:FormalOrganization ;
+  rdfs:label "Department of the Environment and Energy" ;
+.
+xorg:DXWG
+  rdf:type org:Organization ;
+  rdfs:label "W3C Data eXchange Working Group" ;
+.
+xorg:E2SIP
+  rdf:type org:OrganizationalCollaboration ;
+  rdfs:label "Earth and Environment Science Information Partners" ;
+  org:hasMember xorg:ALA ;
+  org:hasMember xorg:ANDS ;
+  org:hasMember xorg:AuScope ;
+  org:hasMember xorg:ESIP ;
+  org:hasMember xorg:GA ;
+  org:hasMember xorg:IMOS ;
+  org:hasMember xorg:NCI ;
+  org:hasMember xorg:TERN ;
+  org:hasMember orgunit:CSIRO ;
+.
+xorg:ESIP
+  rdf:type org:FormalOrganization ;
+  rdfs:label "Earth Science Information Partners" ;
+  org:linkedTo xorg:NASA ;
+  org:linkedTo xorg:NOAA ;
+  org:linkedTo xorg:USGS ;
+.
+xorg:GA
+  rdf:type org:FormalOrganization ;
+  rdfs:label "Geoscience Australia" ;
+.
+xorg:IMOS
+  rdf:type org:FormalOrganization ;
+  rdfs:label "Integrated Marine Observing System" ;
+.
+xorg:NASA
+  rdf:type org:FormalOrganization ;
+  rdfs:label "National Aeronautics and Space Administration" ;
+.
+xorg:NCI
+  rdf:type org:FormalOrganization ;
+  rdfs:label "National Computational Infrastructure" ;
+.
+xorg:NOAA
+  rdf:type org:FormalOrganization ;
+  rdfs:label "National Oceanic and Atmospheric Administration" ;
+.
+xorg:TERN
+  rdf:type org:FormalOrganization ;
+  rdfs:label "Terrestrial Ecosystems Research Network" ;
+.
+xorg:USGS
+  rdf:type org:FormalOrganization ;
+  rdfs:label "US Geological Survey" ;
+.
+orgunit:CSIRO
+  rdf:type org:FormalOrganization ;
+  rdfs:label "Commonwealth Scientific and Industrial Research Organisation" ;
+  org:hasUnit orgunit:Energy ;
+  org:hasUnit orgunit:LW ;
+.
+orgunit:EI
+  rdf:type org:OrganizationalUnit ;
+  rdfs:label "Environmental Informatics group" ;
+  org:hasUnit orgunit:EII ;
+.
+orgunit:EII
+  rdf:type org:OrganizationalUnit ;
+  rdf:type foaf:Group ;
+  rdfs:label "Environmental Information Infrastructure team" ;
+.
+orgunit:Energy
+  rdf:type org:OrganizationalUnit ;
+  rdfs:label "Energy business unit" ;
+.
+orgunit:LW
+  rdf:type org:OrganizationalUnit ;
+  rdfs:label "Land and Water business unit" ;
+  org:hasUnit orgunit:WRM ;
+.
+orgunit:WRM
+  rdf:type org:OrganizationalUnit ;
+  rdfs:label "Water Resource Management program" ;
+  org:hasUnit orgunit:EI ;
+.
+<http://id.csiro.au/person/ashlin.lee>
+  rdf:type prov:Person ;
+  rdfs:label "Ashlin Lee" ;
+  org:memberOf orgunit:EII ;
+  org:reportsTo <http://id.csiro.au/person/paul.j.box> ;
+.
+<http://id.csiro.au/person/ben.leighton>
+  rdf:type prov:Person ;
+  rdfs:label "Ben Leighton" ;
+  org:memberOf orgunit:EII ;
+.
+<http://id.csiro.au/person/david.lemon>
+  rdf:type prov:Person ;
+  rdfs:label "David Lemon" ;
+  org:headOf orgunit:EI ;
+.
+<http://id.csiro.au/person/jean-michel.perraud>
+  rdf:type prov:Person ;
+  rdfs:label "Jean-Michel Perraud" ;
+.
+<http://id.csiro.au/person/jonathan.yu>
+  rdf:type prov:Person ;
+  rdfs:label "Jonathan Yu" ;
+  org:memberOf orgunit:EII ;
+.
+<http://id.csiro.au/person/linda.gregory>
+  rdf:type prov:Person ;
+  rdfs:label "Linda Gregory" ;
+.
+<http://id.csiro.au/person/matt.stenson>
+  rdf:type prov:Person ;
+  rdfs:label "Matt Stenson" ;
+.
+<http://id.csiro.au/person/nick.car>
+  rdf:type prov:Person ;
+  rdfs:label "Nicholas Car" ;
+.
+<http://id.csiro.au/person/paul.j.box>
+  rdf:type prov:Person ;
+  rdfs:label "Paul Box" ;
+  org:memberOf orgunit:EII ;
+.
+<http://id.csiro.au/person/peter.fitch>
+  rdf:type prov:Person ;
+  rdfs:label "Peter Fitch" ;
+.
+<http://id.csiro.au/person/peter.wilson>
+  rdf:type prov:Person ;
+  rdfs:label "Peter Wilson" ;
+.
+<http://id.csiro.au/person/sally.tetreault-campbell>
+  rdf:type prov:Person ;
+  rdfs:label "Sally Tetreault-Campbell" ;
+  org:memberOf orgunit:EII ;
+.
+<http://id.csiro.au/person/simon.cox>
+  rdf:type prov:Person ;
+  rdfs:label "Simon Cox" ;
+  org:headOf orgunit:EII ;
+  org:memberOf orgunit:EII ;
+  foaf:account <http://www.researcherid.com/rid/C-5791-2011> ;
+  foaf:account <https://orcid.org/0000-0002-3884-3420> ;
+  foaf:account <https://scholar.google.com.au/citations?user=4ju7O2AAAAAJ> ;
+  foaf:familyName "Cox" ;
+  foaf:workplaceHomepage <https://people.csiro.au/C/S/Simon-Cox> ;
+.
+<http://id.csiro.au/person/warwick.mcdonald>
+  rdf:type prov:Person ;
+  rdfs:label "Warwick McDonald" ;
+  org:headOf orgunit:WRM ;
+.
+project:AEKOS
+  rdf:type proj:Project ;
+  rdfs:label "AEKOS ontology" ;
+  adms:identifier [
+      rdf:type adms:Identifier ;
+      skos:notation """OD-209070
+""" ;
+      adms:schemeAgency "CSIRO Dynamics" ;
+    ] ;
+  proj:hasLeader <http://id.csiro.au/person/simon.cox> ;
+  proj:hasSponsor xorg:TERN ;
+  prov:used eii:DWC ;
+  prov:used eii:ENVO ;
+  prov:used eii:SKOS ;
+  prov:used eii:SOSA ;
+  prov:used eii:SSN ;
+  prov:used eii:SSN-ext ;
+  prov:used eii:SWEET ;
+.
+project:ANDS-Services
+  rdf:type proj:Project ;
+  rdfs:label "Specialist expertise on geospatial data services" ;
+  adms:identifier [
+      rdf:type adms:Identifier ;
+      skos:notation "OD-208506" ;
+      adms:schemeAgency "CSIRO Dynamics" ;
+    ] ;
+  adms:identifier [
+      rdf:type adms:Identifier ;
+      skos:notation "R-90200-29" ;
+      adms:schemeAgency "CSIRO SAP" ;
+    ] ;
+  proj:hasLeader <http://id.csiro.au/person/simon.cox> ;
+  proj:hasParticipant <http://id.csiro.au/person/jonathan.yu> ;
+  proj:hasSponsor xorg:ANDS ;
+  prov:used eii:DCAT-2014 ;
+  prov:used eii:DCAT-rev ;
+.
+project:ASRIS
+  rdf:type proj:Project ;
+  rdfs:label "ASRIS" ;
+  adms:identifier [
+      rdf:type adms:Identifier ;
+      skos:notation "R-07807" ;
+      adms:schemeAgency "CSIRO SAP" ;
+    ] ;
+  proj:hasLeader <http://id.csiro.au/person/peter.wilson> ;
+  proj:hasParticipant <http://id.csiro.au/person/linda.gregory> ;
+  proj:hasParticipant <http://id.csiro.au/person/simon.cox> ;
+  prov:used eii:LDR ;
+  prov:used eii:SKOS ;
+.
+project:BA
+  rdf:type proj:Project ;
+  rdfs:label "Bioregional Assessments" ;
+  proj:hasParticipant <http://id.csiro.au/person/sally.tetreault-campbell> ;
+  proj:hasParticipant <http://id.csiro.au/person/simon.cox> ;
+  prov:used eii:LDR ;
+  prov:used eii:RVA ;
+  prov:used eii:SKOS ;
+.
+project:CODATA
+  rdf:type proj:Project ;
+  rdfs:label "CODATA Commission on Standards" ;
+  adms:identifier [
+      rdf:type adms:Identifier ;
+      skos:notation """OD-206872
+""" ;
+      adms:schemeAgency "CSIRO Dynamics" ;
+    ] ;
+  adms:identifier [
+      rdf:type adms:Identifier ;
+      skos:notation "R-11749-01" ;
+      adms:schemeAgency "CSIRO SAP" ;
+    ] ;
+  proj:hasLeader <http://id.csiro.au/person/simon.cox> ;
+  proj:hasSponsor orgunit:CSIRO ;
+  proj:plannedEndTime "2020-06-30T24:00:00"^^xsd:dateTime ;
+  proj:plannedStartTime "2017-07-01T00:00:00"^^xsd:dateTime ;
+  prov:startedAtTime "2017-06-19T00:00:00"^^xsd:dateTime ;
+.
+project:DAMC
+  rdf:type proj:Project ;
+  rdfs:label "L&W Data Access and Management Committee" ;
+  proj:hasParticipant <http://id.csiro.au/person/david.lemon> ;
+  proj:hasParticipant <http://id.csiro.au/person/jonathan.yu> ;
+  proj:hasParticipant <http://id.csiro.au/person/paul.j.box> ;
+  proj:hasSponsor orgunit:LW ;
+.
+project:DAMbuster
+  rdf:type proj:Project ;
+  rdfs:label "Project DAMbuster" ;
+  adms:identifier [
+      rdf:type adms:Identifier ;
+      skos:notation "R-08844" ;
+      adms:schemeAgency "CSIRO SAP" ;
+    ] ;
+  proj:hasLeader <http://id.csiro.au/person/jonathan.yu> ;
+  proj:hasParticipant <http://id.csiro.au/person/ben.leighton> ;
+  proj:hasParticipant <http://id.csiro.au/person/simon.cox> ;
+  proj:hasSponsor orgunit:WRM ;
+  proj:plannedStartTime "2017-07-01T00:00:00"^^xsd:dateTime ;
+  prov:generated eii:DCAT-rev ;
+  prov:generated eii:DataRatings ;
+  prov:generated eii:KN ;
+  prov:generated eii:e2ldr ;
+  prov:used eii:CKAN ;
+  prov:used eii:DCAT-2014 ;
+  prov:used eii:LDR ;
+.
+project:DataGovernance
+  rdf:type proj:Project ;
+  rdfs:label "CSIRO Data Governance" ;
+  proj:hasParticipant <http://id.csiro.au/person/david.lemon> ;
+  proj:hasParticipant <http://id.csiro.au/person/paul.j.box> ;
+  proj:hasSponsor orgunit:CSIRO ;
+.
+project:EUDM-WS5
+  rdf:type proj:Project ;
+  rdfs:label "Energy Use Data Model - Workstream 5" ;
+  proj:hasParticipant <http://id.csiro.au/person/ben.leighton> ;
+  proj:hasParticipant <http://id.csiro.au/person/jonathan.yu> ;
+  proj:hasParticipant <http://id.csiro.au/person/nick.car> ;
+  proj:hasParticipant <http://id.csiro.au/person/sally.tetreault-campbell> ;
+  proj:hasParticipant <http://id.csiro.au/person/simon.cox> ;
+  prov:generated eii:DCAT-rev ;
+.
+project:FarmersDataMarket
+  rdf:type proj:Project ;
+  rdfs:label "Farmers Data Market" ;
+  proj:hasParticipant <http://id.csiro.au/person/ashlin.lee> ;
+  proj:hasParticipant <http://id.csiro.au/person/paul.j.box> ;
+.
+project:NAWRA
+  rdf:type proj:Project ;
+  rdfs:label "Northern Australia Water Resource Assessment" ;
+  proj:hasParticipant <http://id.csiro.au/person/sally.tetreault-campbell> ;
+.
+project:PlannedBurns
+  rdf:type proj:Project ;
+  rdfs:label "Planned Burns" ;
+  proj:hasParticipant <http://id.csiro.au/person/ben.leighton> ;
+.
+project:SeaDataCloud
+  rdf:type proj:Project ;
+  rdfs:label "SeaDataCloud" ;
+  adms:identifier [
+      rdf:type adms:Identifier ;
+      skos:notation "OD-200864" ;
+      adms:schemeAgency "CSIRO Dynamics" ;
+    ] ;
+  adms:identifier [
+      rdf:type adms:Identifier ;
+      skos:notation "R-10005" ;
+      adms:schemeAgency "CSIRO SAP" ;
+    ] ;
+  proj:hasLeader <http://id.csiro.au/person/simon.cox> ;
+  prov:used eii:OandM ;
+  prov:used eii:SISSvoc ;
+  prov:used eii:SKOS ;
+.
+proj:hasLeader
+  rdfs:subPropertyOf proj:hasParticipant ;
+.
