@@ -38,8 +38,14 @@ eii:CKAN
 .
 eii:CKAN-DCAT
   rdf:type eii:Technology ;
+  dcterms:requires eii:CKAN ;
   rdfs:label "DCAT plugin for CKAN" ;
   foaf:homepage <https://github.com/ckan/ckanext-dcat> ;
+.
+eii:DAP
+  rdf:type eii:Technology ;
+  rdfs:label "CSIRO Data Access Portal" ;
+  foaf:homepage <http://data.csiro.au> ;
 .
 eii:DCAT-2014
   rdf:type eii:Technology ;
@@ -95,6 +101,12 @@ eii:LDR
   prov:wasAttributedTo xorg:Epimorphics ;
   foaf:homepage <https://github.com/UKGovLD/registry-core> ;
 .
+eii:Network
+  rdf:type eii:Technology ;
+  rdfs:comment "the system formerly known as AAYS" ;
+  rdfs:label "CSIRO Network" ;
+  foaf:homepage <http://network.csiro.au/> ;
+.
 eii:OBO
   rdf:type eii:Technology ;
   rdfs:label "OBO Foundry biomedical ontologies" ;
@@ -108,8 +120,8 @@ eii:OandM
 .
 eii:PROMS
   rdf:type eii:Technology ;
+  dcterms:requires eii:PROV-O ;
   rdfs:label "PROMS" ;
-  prov:wasDerivedFrom eii:PROV-O ;
   prov:wasGeneratedBy project:BA ;
   foaf:homepage <https://promsns.org/def/proms/proms.html> ;
 .
@@ -138,12 +150,24 @@ eii:RVA
   prov:wasDerivedFrom eii:SISSvoc ;
   foaf:homepage <https://vocabs.ands.org.au/> ;
 .
+eii:Registry2ItCSIRO
+  rdf:type eii:Technology ;
+  dcterms:requires eii:LDR ;
+  rdfs:label "Linked data registry 2" ;
+  foaf:homepage <http://registry2.it.csiro.au> ;
+.
+eii:RegistryItCSIRO
+  rdf:type eii:Technology ;
+  dcterms:requires eii:LDR ;
+  rdfs:label "Linked data registry 1" ;
+  foaf:homepage <http://registry.it.csiro.au> ;
+.
 eii:SISSvoc
   rdf:type eii:Technology ;
+  dcterms:requires eii:SKOS ;
   rdfs:label "SISSvoc" ;
   prov:wasAttributedTo <http://id.csiro.au/person/jonathan.yu> ;
   prov:wasAttributedTo <http://id.csiro.au/person/simon.cox> ;
-  prov:wasDerivedFrom eii:SKOS ;
   foaf:homepage <https://github.com/SISS/SISSVoc> ;
 .
 eii:SISSvoc-explorer
@@ -602,6 +626,7 @@ project:EEM
   rdfs:label "Essential Environmental Measures review" ;
   proj:hasLeader <http://id.csiro.au/person/paul.j.box> ;
   proj:hasParticipant <http://id.csiro.au/person/david.lemon> ;
+  proj:hasSponsor xorg:DOEE ;
 .
 project:EPBC
   rdf:type proj:Project ;
