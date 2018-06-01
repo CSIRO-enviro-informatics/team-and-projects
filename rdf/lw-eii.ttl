@@ -1,8 +1,8 @@
 # baseURI: http://id.csiro.au/dataset/lw-eii
 # imports: http://purl.org/dc/terms/
-# imports: http://registry.it.csiro.au/ont/norg
 # imports: http://www.w3.org/2004/02/skos/core
 # imports: http://www.w3.org/ns/adms
+# imports: http://www.w3.org/ns/org
 # imports: http://www.w3.org/ns/project
 
 @prefix adms: <http://www.w3.org/ns/adms#> .
@@ -25,9 +25,9 @@
 <http://id.csiro.au/dataset/lw-eii>
   rdf:type owl:Ontology ;
   owl:imports dcterms: ;
-  owl:imports <http://registry.it.csiro.au/ont/norg> ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:imports <http://www.w3.org/ns/adms> ;
+  owl:imports <http://www.w3.org/ns/org> ;
   owl:imports <http://www.w3.org/ns/project> ;
 .
 eii:CKAN
@@ -50,6 +50,7 @@ eii:DCAT-2014
 eii:DCAT-rev
   rdf:type eii:Technology ;
   rdfs:label "W3C Data Catalog - revision" ;
+  prov:wasAttributedTo xorg:DXWG ;
   prov:wasAttributedTo xorg:W3C ;
   prov:wasDerivedFrom eii:DCAT-2014 ;
   foaf:homepage <https://w3c.github.io/dxwg/dcat/> ;
@@ -200,6 +201,13 @@ eii:rdf4j
   rdf:type eii:Technology ;
   rdfs:label "RDF4J - formerly known as Sesame" ;
   foaf:homepage <http://rdf4j.org/> ;
+.
+xorg:ABS
+  rdf:type org:FormalOrganization ;
+  rdf:type prov:Organization ;
+  dcterms:identifier <http://test.linked.data.gov.au/org/O-000928> ;
+  rdfs:label "Australian Bureau of Statistics" ;
+  foaf:homepage <http://abs.gov.au/> ;
 .
 xorg:AGLDWG
   rdf:type org:OrganizationalCollaboration ;
@@ -569,6 +577,8 @@ project:DAMbuster
     ] ;
   proj:hasLeader <http://id.csiro.au/person/jonathan.yu> ;
   proj:hasParticipant <http://id.csiro.au/person/ben.leighton> ;
+  proj:hasParticipant <http://id.csiro.au/person/david.lemon> ;
+  proj:hasParticipant <http://id.csiro.au/person/paul.j.box> ;
   proj:hasParticipant <http://id.csiro.au/person/simon.cox> ;
   proj:hasSponsor orgunit:WRM ;
   proj:plannedStartTime "2017-07-01T00:00:00"^^xsd:dateTime ;
@@ -586,6 +596,12 @@ project:DataGovernance
   proj:hasParticipant <http://id.csiro.au/person/david.lemon> ;
   proj:hasParticipant <http://id.csiro.au/person/paul.j.box> ;
   proj:hasSponsor orgunit:CSIRO ;
+.
+project:EEM
+  rdf:type proj:Project ;
+  rdfs:label "Essential Environmental Measures review" ;
+  proj:hasLeader <http://id.csiro.au/person/paul.j.box> ;
+  proj:hasParticipant <http://id.csiro.au/person/david.lemon> ;
 .
 project:EPBC
   rdf:type proj:Project ;
@@ -608,6 +624,15 @@ project:FarmersDataMarket
   rdfs:label "Farmers Data Market" ;
   proj:hasParticipant <http://id.csiro.au/person/ashlin.lee> ;
   proj:hasParticipant <http://id.csiro.au/person/paul.j.box> ;
+.
+project:LOC-I
+  rdf:type proj:Project ;
+  rdfs:label "Location integration capability" ;
+  proj:hasLeader <http://id.csiro.au/person/paul.j.box> ;
+  proj:hasParticipant <http://id.csiro.au/person/david.lemon> ;
+  proj:hasParticipant <http://id.csiro.au/person/jonathan.yu> ;
+  proj:hasParticipant <http://id.csiro.au/person/nick.car> ;
+  proj:hasSponsor xorg:ABS ;
 .
 project:NAWRA
   rdf:type proj:Project ;
@@ -636,7 +661,4 @@ project:SeaDataCloud
   prov:used eii:OandM ;
   prov:used eii:SISSvoc ;
   prov:used eii:SKOS ;
-.
-proj:hasLeader
-  rdfs:subPropertyOf proj:hasParticipant ;
 .
