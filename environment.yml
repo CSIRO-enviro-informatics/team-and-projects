@@ -1,0 +1,6 @@
+name: ei-team
+channels:
+  - bioconda
+  - conda-forge
+  - defaults
+
