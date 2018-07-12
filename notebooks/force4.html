@@ -100,17 +100,24 @@ d3.json("data.json", function(error, graph) {
       .attr('stroke','#000')
 	  .attr('stroke-width',1)
   .attr("fill", function(d) { 
+      var origcolor = '';
+      
       if(d.type.indexOf("prov:Person") != -1) {
-           return "#90E2A9";
+           origcolor = "#90E2A9";
       }
-      return color(d.group); 
+      else {
+          origcolor =  color(d.group); 
+      }
+      
+      d.origcolor = origcolor;
+      return origcolor;
   })
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
           .on("end", dragended))
-       .on("mouseover", handleMouseOver)
-       .on("mouseout", handleMouseOut)
+//       .on("mouseover", handleMouseOver)
+//       .on("mouseout", handleMouseOut)
        .on("click",selectNode);
       
 
@@ -200,7 +207,21 @@ function resize(){
         if (neighbors.indexOf(node.id) != -1) { //if node in neighbors
            return 'green'
         }
-        return 'red'
+        return node.origcolor;
+    }
+     function getNodeOpacity(node, neighbors) {
+        var test = neighbors.indexOf(node.id)
+        if (neighbors.indexOf(node.id) != -1) { //if node in neighbors
+           return '1.0'
+        }
+        return '0.1';
+    }
+    function getStrokeOpacity(node, neighbors) {
+        var test = neighbors.indexOf(node.id)
+        if (neighbors.indexOf(node.id) != -1) { //if node in neighbors
+           return '1.0'
+        }
+        return '0.1';
     }
     function getTextVisibility(node, neighbors) {
       console.log(node);
@@ -216,6 +237,9 @@ function resize(){
       const neighbors = getNeighbors(selectedNode)
       nodeElements
         .attr('fill', node => getNodeColor(node, neighbors)) 
+        .attr('fill-opacity', node => getNodeOpacity(node, neighbors)) 
+        .attr('stroke-opacity', node => getStrokeOpacity(node, neighbors)) 
+        
       textElements
         .attr('visibility', node => getTextVisibility(node, neighbors))
       linkElements
