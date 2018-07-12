@@ -205,7 +205,7 @@ function resize(){
     function getNodeColor(node, neighbors) {
         var test = neighbors.indexOf(node.id)
         if (neighbors.indexOf(node.id) != -1) { //if node in neighbors
-           return 'green'
+           return node.origcolor;
         }
         return node.origcolor;
     }
