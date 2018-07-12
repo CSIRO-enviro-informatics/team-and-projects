@@ -1,0 +1,2006 @@
+{
+    "links": [
+        {
+            "source": "Ben Leighton",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "Ben Leighton",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "Ben Leighton",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "W3C Data Catalog - revision",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "W3C Data Catalog - revision",
+            "target": "World Wide Web Consortium",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "W3C Data Catalog - revision",
+            "target": "World Wide Web Consortium",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "W3C Data Catalog - revision",
+            "target": "W3C Data Catalog",
+            "type": "prov:wasDerivedFrom",
+            "value": "1"
+        },
+        {
+            "source": "W3C Data Catalog - revision",
+            "target": "W3C Data eXchange Working Group",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "W3C Data Catalog - revision",
+            "target": "W3C Data eXchange Working Group",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "AEKOS ontology",
+            "target": "Semantic Web for Earth and Environmental Terminology ",
+            "type": "prov:used",
+            "value": "1"
+        },
+        {
+            "source": "AEKOS ontology",
+            "target": "Simple Knowledge Organization System",
+            "type": "prov:used",
+            "value": "1"
+        },
+        {
+            "source": "AEKOS ontology",
+            "target": "W3C Sensors Observations Sampling and Actuation vocabulary",
+            "type": "prov:used",
+            "value": "1"
+        },
+        {
+            "source": "AEKOS ontology",
+            "target": "W3C Semantic Sensor Network Ontology",
+            "type": "prov:used",
+            "value": "1"
+        },
+        {
+            "source": "AEKOS ontology",
+            "target": "SSN extensions",
+            "type": "prov:used",
+            "value": "1"
+        },
+        {
+            "source": "AEKOS ontology",
+            "target": "Darwin Core",
+            "type": "prov:used",
+            "value": "1"
+        },
+        {
+            "source": "AEKOS ontology",
+            "target": "Terrestrial Ecosystems Research Network",
+            "type": "proj:hasSponsor",
+            "value": "1"
+        },
+        {
+            "source": "AEKOS ontology",
+            "target": "Environment Ontology",
+            "type": "prov:used",
+            "value": "1"
+        },
+        {
+            "source": "AEKOS ontology",
+            "target": "Terrestrial Ecosystems Research Network",
+            "type": "proj:hasSponsor",
+            "value": "1"
+        },
+        {
+            "source": "AEKOS ontology",
+            "target": "Simon Cox",
+            "type": "proj:hasLeader",
+            "value": "1"
+        },
+        {
+            "source": "PROMS",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "PROMS",
+            "target": "Bioregional Assessments",
+            "type": "prov:wasGeneratedBy",
+            "value": "1"
+        },
+        {
+            "source": "PROMS",
+            "target": "W3C Provenance Ontology",
+            "type": "dcterms:requires",
+            "value": "1"
+        },
+        {
+            "source": "Energy Use Data Model - Workstream 5",
+            "target": "Ben Leighton",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "Energy Use Data Model - Workstream 5",
+            "target": "W3C Data Catalog - revision",
+            "type": "prov:generated",
+            "value": "1"
+        },
+        {
+            "source": "Energy Use Data Model - Workstream 5",
+            "target": "Jonathan Yu",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "Energy Use Data Model - Workstream 5",
+            "target": "Sally Tetreault-Campbell",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "Energy Use Data Model - Workstream 5",
+            "target": "Nicholas Car",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "Energy Use Data Model - Workstream 5",
+            "target": "Simon Cox",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "SISSvoc",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "SISSvoc",
+            "target": "Simple Knowledge Organization System",
+            "type": "dcterms:requires",
+            "value": "1"
+        },
+        {
+            "source": "SISSvoc",
+            "target": "Jonathan Yu",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "SISSvoc",
+            "target": "Simon Cox",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Integrated Marine Observing System",
+            "target": "Earth Science Information Partners",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "Integrated Marine Observing System",
+            "target": "Earth Science Information Partners",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "Bioregional Assessments",
+            "target": "Simple Knowledge Organization System",
+            "type": "prov:used",
+            "value": "1"
+        },
+        {
+            "source": "Bioregional Assessments",
+            "target": "Research Vocabularies Australia",
+            "type": "prov:used",
+            "value": "1"
+        },
+        {
+            "source": "Bioregional Assessments",
+            "target": "Sally Tetreault-Campbell",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "Bioregional Assessments",
+            "target": "Linked Data Registry",
+            "type": "prov:used",
+            "value": "1"
+        },
+        {
+            "source": "Bioregional Assessments",
+            "target": "Simon Cox",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "Earth Science Information Partners",
+            "target": "National Aeronautics and Space Administration",
+            "type": "org:linkedTo",
+            "value": "1"
+        },
+        {
+            "source": "Earth Science Information Partners",
+            "target": "National Aeronautics and Space Administration",
+            "type": "org:linkedTo",
+            "value": "1"
+        },
+        {
+            "source": "Earth Science Information Partners",
+            "target": "US Geological Survey",
+            "type": "org:linkedTo",
+            "value": "1"
+        },
+        {
+            "source": "Earth Science Information Partners",
+            "target": "National Oceanic and Atmospheric Administration",
+            "type": "org:linkedTo",
+            "value": "1"
+        },
+        {
+            "source": "Earth Science Information Partners",
+            "target": "US Geological Survey",
+            "type": "org:linkedTo",
+            "value": "1"
+        },
+        {
+            "source": "Earth Science Information Partners",
+            "target": "National Oceanic and Atmospheric Administration",
+            "type": "org:linkedTo",
+            "value": "1"
+        },
+        {
+            "source": "Semantic Web for Earth and Environmental Terminology ",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "Semantic Web for Earth and Environmental Terminology ",
+            "target": "Earth Science Information Partners",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Semantic Web for Earth and Environmental Terminology ",
+            "target": "Earth Science Information Partners",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Semantic Web for Earth and Environmental Terminology ",
+            "target": "National Aeronautics and Space Administration",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Semantic Web for Earth and Environmental Terminology ",
+            "target": "National Aeronautics and Space Administration",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Integrated Marine Observing System",
+            "target": "Earth Science Information Partners",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "Integrated Marine Observing System",
+            "target": "Earth Science Information Partners",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "Environmental Informatics group",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "Environmental Informatics group",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "Environmental Informatics group",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "W3C Provenance Ontology",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "W3C Provenance Ontology",
+            "target": "World Wide Web Consortium",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "W3C Provenance Ontology",
+            "target": "World Wide Web Consortium",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Simple Knowledge Organization System",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "Simple Knowledge Organization System",
+            "target": "World Wide Web Consortium",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Simple Knowledge Organization System",
+            "target": "World Wide Web Consortium",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Land and Water business unit",
+            "target": "Water Resource Management program",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "Land and Water business unit",
+            "target": "Water Resource Management program",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "Profiling standards - description",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "Profiling standards - description",
+            "target": "W3C Data eXchange Working Group",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Profiling standards - description",
+            "target": "W3C Data eXchange Working Group",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "W3C Sensors Observations Sampling and Actuation vocabulary",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "W3C Sensors Observations Sampling and Actuation vocabulary",
+            "target": "World Wide Web Consortium",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "W3C Sensors Observations Sampling and Actuation vocabulary",
+            "target": "World Wide Web Consortium",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "W3C Sensors Observations Sampling and Actuation vocabulary",
+            "target": "OGC Observations and Measurements",
+            "type": "prov:wasDerivedFrom",
+            "value": "1"
+        },
+        {
+            "source": "Environmental Informatics group",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "Environmental Informatics group",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "Environmental Informatics group",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "Farmers Data Market",
+            "target": "Paul Box",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "Farmers Data Market",
+            "target": "Ashlin Lee",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "Earth Science Information Partners",
+            "target": "National Aeronautics and Space Administration",
+            "type": "org:linkedTo",
+            "value": "1"
+        },
+        {
+            "source": "Earth Science Information Partners",
+            "target": "National Aeronautics and Space Administration",
+            "type": "org:linkedTo",
+            "value": "1"
+        },
+        {
+            "source": "Earth Science Information Partners",
+            "target": "US Geological Survey",
+            "type": "org:linkedTo",
+            "value": "1"
+        },
+        {
+            "source": "Earth Science Information Partners",
+            "target": "National Oceanic and Atmospheric Administration",
+            "type": "org:linkedTo",
+            "value": "1"
+        },
+        {
+            "source": "Earth Science Information Partners",
+            "target": "US Geological Survey",
+            "type": "org:linkedTo",
+            "value": "1"
+        },
+        {
+            "source": "Earth Science Information Partners",
+            "target": "National Oceanic and Atmospheric Administration",
+            "type": "org:linkedTo",
+            "value": "1"
+        },
+        {
+            "source": "W3C Semantic Sensor Network Ontology",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "W3C Semantic Sensor Network Ontology",
+            "target": "W3C Sensors Observations Sampling and Actuation vocabulary",
+            "type": "prov:wasDerivedFrom",
+            "value": "1"
+        },
+        {
+            "source": "W3C Semantic Sensor Network Ontology",
+            "target": "World Wide Web Consortium",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "W3C Semantic Sensor Network Ontology",
+            "target": "World Wide Web Consortium",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Land and Water business unit",
+            "target": "Water Resource Management program",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "Land and Water business unit",
+            "target": "Water Resource Management program",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "Linked data registry 2",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "Linked data registry 2",
+            "target": "Linked Data Registry",
+            "type": "dcterms:requires",
+            "value": "1"
+        },
+        {
+            "source": "Knowledge Network",
+            "target": "Environmental Information Infrastructure team",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Knowledge Network",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "Knowledge Network",
+            "target": "Environmental Information Infrastructure team",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Knowledge Network",
+            "target": "Environmental Information Infrastructure team",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "SSN extensions",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "SSN extensions",
+            "target": "W3C Sensors Observations Sampling and Actuation vocabulary",
+            "type": "prov:wasDerivedFrom",
+            "value": "1"
+        },
+        {
+            "source": "SSN extensions",
+            "target": "W3C Semantic Sensor Network Ontology",
+            "type": "prov:wasDerivedFrom",
+            "value": "1"
+        },
+        {
+            "source": "SSN extensions",
+            "target": "Simon Cox",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Project DAMbuster",
+            "target": "Ben Leighton",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "Project DAMbuster",
+            "target": "W3C Data Catalog - revision",
+            "type": "prov:generated",
+            "value": "1"
+        },
+        {
+            "source": "Project DAMbuster",
+            "target": "Knowledge Network",
+            "type": "prov:generated",
+            "value": "1"
+        },
+        {
+            "source": "Project DAMbuster",
+            "target": "CKAN",
+            "type": "prov:used",
+            "value": "1"
+        },
+        {
+            "source": "Project DAMbuster",
+            "target": "David Lemon",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "Project DAMbuster",
+            "target": "CSIRO Data Ratings",
+            "type": "prov:generated",
+            "value": "1"
+        },
+        {
+            "source": "Project DAMbuster",
+            "target": "Paul Box",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "Project DAMbuster",
+            "target": "Water Resource Management program",
+            "type": "proj:hasSponsor",
+            "value": "1"
+        },
+        {
+            "source": "Project DAMbuster",
+            "target": "Jonathan Yu",
+            "type": "proj:hasLeader",
+            "value": "1"
+        },
+        {
+            "source": "Project DAMbuster",
+            "target": "W3C Data Catalog",
+            "type": "prov:used",
+            "value": "1"
+        },
+        {
+            "source": "Project DAMbuster",
+            "target": "Excel2LDR",
+            "type": "prov:generated",
+            "value": "1"
+        },
+        {
+            "source": "Project DAMbuster",
+            "target": "Linked Data Registry",
+            "type": "prov:used",
+            "value": "1"
+        },
+        {
+            "source": "Project DAMbuster",
+            "target": "Simon Cox",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "Project DAMbuster",
+            "target": "Water Resource Management program",
+            "type": "proj:hasSponsor",
+            "value": "1"
+        },
+        {
+            "source": "Darwin Core",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "Darwin Core",
+            "target": "Biodiversity Information Standards (TDWG)",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Darwin Core",
+            "target": "Biodiversity Information Standards (TDWG)",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "CKAN",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "CKAN",
+            "target": "Open Knowledge International",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "CKAN",
+            "target": "Open Knowledge International",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "David Lemon",
+            "target": "Environmental Informatics group",
+            "type": "org:headOf",
+            "value": "1"
+        },
+        {
+            "source": "David Lemon",
+            "target": "Environmental Informatics group",
+            "type": "org:headOf",
+            "value": "1"
+        },
+        {
+            "source": "CSIRO Data Ratings",
+            "target": "Environmental Information Infrastructure team",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "CSIRO Data Ratings",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "CSIRO Data Ratings",
+            "target": "Environmental Information Infrastructure team",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "CSIRO Data Ratings",
+            "target": "Environmental Information Infrastructure team",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Paul Box",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "Paul Box",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "Paul Box",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "SeaDataCloud",
+            "target": "SISSvoc",
+            "type": "prov:used",
+            "value": "1"
+        },
+        {
+            "source": "SeaDataCloud",
+            "target": "Simple Knowledge Organization System",
+            "type": "prov:used",
+            "value": "1"
+        },
+        {
+            "source": "SeaDataCloud",
+            "target": "OGC Observations and Measurements",
+            "type": "prov:used",
+            "value": "1"
+        },
+        {
+            "source": "SeaDataCloud",
+            "target": "Simon Cox",
+            "type": "proj:hasLeader",
+            "value": "1"
+        },
+        {
+            "source": "Water Resource Management program",
+            "target": "Environmental Informatics group",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "Water Resource Management program",
+            "target": "Environmental Informatics group",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "Jonathan Yu",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "Jonathan Yu",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "Jonathan Yu",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "Environment Ontology",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "W3C Data Catalog",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "W3C Data Catalog",
+            "target": "World Wide Web Consortium",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "W3C Data Catalog",
+            "target": "World Wide Web Consortium",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "CRISP",
+            "target": "Paul Box",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "Location integration capability",
+            "target": "David Lemon",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "Location integration capability",
+            "target": "Paul Box",
+            "type": "proj:hasLeader",
+            "value": "1"
+        },
+        {
+            "source": "Location integration capability",
+            "target": "Jonathan Yu",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "Location integration capability",
+            "target": "Nicholas Car",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "Location integration capability",
+            "target": "Australian Bureau of Statistics",
+            "type": "proj:hasSponsor",
+            "value": "1"
+        },
+        {
+            "source": "Location integration capability",
+            "target": "Australian Bureau of Statistics",
+            "type": "proj:hasSponsor",
+            "value": "1"
+        },
+        {
+            "source": "L&W Data Access and Management Committee",
+            "target": "Land and Water business unit",
+            "type": "proj:hasSponsor",
+            "value": "1"
+        },
+        {
+            "source": "L&W Data Access and Management Committee",
+            "target": "Land and Water business unit",
+            "type": "proj:hasSponsor",
+            "value": "1"
+        },
+        {
+            "source": "L&W Data Access and Management Committee",
+            "target": "David Lemon",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "L&W Data Access and Management Committee",
+            "target": "Paul Box",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "L&W Data Access and Management Committee",
+            "target": "Jonathan Yu",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "Research Vocabularies Australia",
+            "target": "SISSvoc",
+            "type": "prov:wasDerivedFrom",
+            "value": "1"
+        },
+        {
+            "source": "Research Vocabularies Australia",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "Research Vocabularies Australia",
+            "target": "Australian National Data Service",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Research Vocabularies Australia",
+            "target": "Australian National Data Service",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Sally Tetreault-Campbell",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "Sally Tetreault-Campbell",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "Sally Tetreault-Campbell",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "Excel2LDR",
+            "target": "Environmental Information Infrastructure team",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Excel2LDR",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "Excel2LDR",
+            "target": "Environmental Information Infrastructure team",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Excel2LDR",
+            "target": "Environmental Information Infrastructure team",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Integrated Marine Observing System",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Earth Science Information Partners",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Integrated Marine Observing System",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Atlas of Living Australia",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Earth Science Information Partners",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Atlas of Living Australia",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "National Computational Infrastructure",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Terrestrial Ecosystems Research Network",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "National Computational Infrastructure",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Geoscience Australia",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "AuScope",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Terrestrial Ecosystems Research Network",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Commonwealth Scientific and Industrial Research Organisation",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Geoscience Australia",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "AuScope",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Australian National Data Service",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Commonwealth Scientific and Industrial Research Organisation",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Australian National Data Service",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "W3C Data eXchange Working Group",
+            "target": "World Wide Web Consortium",
+            "type": "org:unitOf",
+            "value": "1"
+        },
+        {
+            "source": "W3C Data eXchange Working Group",
+            "target": "World Wide Web Consortium",
+            "type": "org:unitOf",
+            "value": "1"
+        },
+        {
+            "source": "Linked Data Registry",
+            "target": "Epimorphics ",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Linked Data Registry",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "Linked Data Registry",
+            "target": "Epimorphics ",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Commonwealth Scientific and Industrial Research Organisation",
+            "target": "Land and Water business unit",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "Commonwealth Scientific and Industrial Research Organisation",
+            "target": "Land and Water business unit",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "Commonwealth Scientific and Industrial Research Organisation",
+            "target": "Energy business unit",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "Commonwealth Scientific and Industrial Research Organisation",
+            "target": "Energy business unit",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "Ashlin Lee",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "Ashlin Lee",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "Ashlin Lee",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "Ashlin Lee",
+            "target": "Paul Box",
+            "type": "org:reportsTo",
+            "value": "1"
+        },
+        {
+            "source": "RDF4J - formerly known as Sesame",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "CODATA Commission on Standards",
+            "target": "Commonwealth Scientific and Industrial Research Organisation",
+            "type": "proj:hasSponsor",
+            "value": "1"
+        },
+        {
+            "source": "CODATA Commission on Standards",
+            "target": "Commonwealth Scientific and Industrial Research Organisation",
+            "type": "proj:hasSponsor",
+            "value": "1"
+        },
+        {
+            "source": "CODATA Commission on Standards",
+            "target": "Simon Cox",
+            "type": "proj:hasLeader",
+            "value": "1"
+        },
+        {
+            "source": "DCAT plugin for CKAN",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "DCAT plugin for CKAN",
+            "target": "CKAN",
+            "type": "dcterms:requires",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Integrated Marine Observing System",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Earth Science Information Partners",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Integrated Marine Observing System",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Atlas of Living Australia",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Earth Science Information Partners",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Atlas of Living Australia",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "National Computational Infrastructure",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Terrestrial Ecosystems Research Network",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "National Computational Infrastructure",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Geoscience Australia",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "AuScope",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Terrestrial Ecosystems Research Network",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Commonwealth Scientific and Industrial Research Organisation",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Geoscience Australia",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "AuScope",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Australian National Data Service",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Commonwealth Scientific and Industrial Research Organisation",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Earth and Environment Science Information Partners",
+            "target": "Australian National Data Service",
+            "type": "org:hasMember",
+            "value": "1"
+        },
+        {
+            "source": "Findable, Accessible, Interoperable & Reusable",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "SISSvoc explorer",
+            "target": "SISSvoc",
+            "type": "prov:wasDerivedFrom",
+            "value": "1"
+        },
+        {
+            "source": "SISSvoc explorer",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "SISSvoc explorer",
+            "target": "Jonathan Yu",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "OGC Observations and Measurements",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "OGC Observations and Measurements",
+            "target": "Open Geospatial Consortium",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "OGC Observations and Measurements",
+            "target": "Open Geospatial Consortium",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "5-star data sharing assessment",
+            "target": "Environmental Information Infrastructure team",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "5-star data sharing assessment",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "5-star data sharing assessment",
+            "target": "Environmental Information Infrastructure team",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "5-star data sharing assessment",
+            "target": "Environmental Information Infrastructure team",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "5-star data sharing assessment",
+            "target": "CSIRO Data Ratings",
+            "type": "prov:wasDerivedFrom",
+            "value": "1"
+        },
+        {
+            "source": "Research Data Australia",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "Research Data Australia",
+            "target": "Australian National Data Service",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "Research Data Australia",
+            "target": "Australian National Data Service",
+            "type": "prov:wasAttributedTo",
+            "value": "1"
+        },
+        {
+            "source": "CSIRO Data Access Portal",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "Northern Australia Water Resource Assessment",
+            "target": "Sally Tetreault-Campbell",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "OBO Foundry biomedical ontologies",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "EPBC",
+            "target": "Paul Box",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "EPBC",
+            "target": "Paul Box",
+            "type": "proj:hasLeader",
+            "value": "1"
+        },
+        {
+            "source": "Warwick McDonald",
+            "target": "Water Resource Management program",
+            "type": "org:headOf",
+            "value": "1"
+        },
+        {
+            "source": "Warwick McDonald",
+            "target": "Water Resource Management program",
+            "type": "org:headOf",
+            "value": "1"
+        },
+        {
+            "source": "Planned Burns",
+            "target": "Ben Leighton",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "Specialist expertise on geospatial data services",
+            "target": "W3C Data Catalog - revision",
+            "type": "prov:used",
+            "value": "1"
+        },
+        {
+            "source": "Specialist expertise on geospatial data services",
+            "target": "Jonathan Yu",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "Specialist expertise on geospatial data services",
+            "target": "W3C Data Catalog",
+            "type": "prov:used",
+            "value": "1"
+        },
+        {
+            "source": "Specialist expertise on geospatial data services",
+            "target": "Australian National Data Service",
+            "type": "proj:hasSponsor",
+            "value": "1"
+        },
+        {
+            "source": "Specialist expertise on geospatial data services",
+            "target": "Simon Cox",
+            "type": "proj:hasLeader",
+            "value": "1"
+        },
+        {
+            "source": "Specialist expertise on geospatial data services",
+            "target": "Australian National Data Service",
+            "type": "proj:hasSponsor",
+            "value": "1"
+        },
+        {
+            "source": "Essential Environmental Measures review",
+            "target": "Department of the Environment and Energy",
+            "type": "proj:hasSponsor",
+            "value": "1"
+        },
+        {
+            "source": "Essential Environmental Measures review",
+            "target": "David Lemon",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "Essential Environmental Measures review",
+            "target": "Paul Box",
+            "type": "proj:hasLeader",
+            "value": "1"
+        },
+        {
+            "source": "Essential Environmental Measures review",
+            "target": "Department of the Environment and Energy",
+            "type": "proj:hasSponsor",
+            "value": "1"
+        },
+        {
+            "source": "Commonwealth Scientific and Industrial Research Organisation",
+            "target": "Land and Water business unit",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "Commonwealth Scientific and Industrial Research Organisation",
+            "target": "Land and Water business unit",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "Commonwealth Scientific and Industrial Research Organisation",
+            "target": "Energy business unit",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "Commonwealth Scientific and Industrial Research Organisation",
+            "target": "Energy business unit",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "CSIRO Data Governance",
+            "target": "David Lemon",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "CSIRO Data Governance",
+            "target": "Paul Box",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "CSIRO Data Governance",
+            "target": "Commonwealth Scientific and Industrial Research Organisation",
+            "type": "proj:hasSponsor",
+            "value": "1"
+        },
+        {
+            "source": "CSIRO Data Governance",
+            "target": "Commonwealth Scientific and Industrial Research Organisation",
+            "type": "proj:hasSponsor",
+            "value": "1"
+        },
+        {
+            "source": "Linked data registry 1",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "Linked data registry 1",
+            "target": "Linked Data Registry",
+            "type": "dcterms:requires",
+            "value": "1"
+        },
+        {
+            "source": "Simon Cox",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:headOf",
+            "value": "1"
+        },
+        {
+            "source": "Simon Cox",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "Simon Cox",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:headOf",
+            "value": "1"
+        },
+        {
+            "source": "Simon Cox",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "Simon Cox",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:headOf",
+            "value": "1"
+        },
+        {
+            "source": "Simon Cox",
+            "target": "Environmental Information Infrastructure team",
+            "type": "org:memberOf",
+            "value": "1"
+        },
+        {
+            "source": "CSIRO Network",
+            "target": "Technology or component",
+            "type": "rdf:type",
+            "value": "1"
+        },
+        {
+            "source": "ASRIS",
+            "target": "Peter Wilson",
+            "type": "proj:hasLeader",
+            "value": "1"
+        },
+        {
+            "source": "ASRIS",
+            "target": "Simple Knowledge Organization System",
+            "type": "prov:used",
+            "value": "1"
+        },
+        {
+            "source": "ASRIS",
+            "target": "Linked Data Registry",
+            "type": "prov:used",
+            "value": "1"
+        },
+        {
+            "source": "ASRIS",
+            "target": "Linda Gregory",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "ASRIS",
+            "target": "Simon Cox",
+            "type": "proj:hasParticipant",
+            "value": "1"
+        },
+        {
+            "source": "Water Resource Management program",
+            "target": "Environmental Informatics group",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "Water Resource Management program",
+            "target": "Environmental Informatics group",
+            "type": "org:hasUnit",
+            "value": "1"
+        },
+        {
+            "source": "W3C Data eXchange Working Group",
+            "target": "World Wide Web Consortium",
+            "type": "org:unitOf",
+            "value": "1"
+        },
+        {
+            "source": "W3C Data eXchange Working Group",
+            "target": "World Wide Web Consortium",
+            "type": "org:unitOf",
+            "value": "1"
+        }
+    ],
+    "nodes": [
+        {
+            "group": 10,
+            "id": "Ben Leighton"
+        },
+        {
+            "group": 5,
+            "id": "Environmental Information Infrastructure team"
+        },
+        {
+            "group": 7,
+            "id": "W3C Data Catalog - revision"
+        },
+        {
+            "group": 1,
+            "id": "Technology or component"
+        },
+        {
+            "group": 5,
+            "id": "World Wide Web Consortium"
+        },
+        {
+            "group": 7,
+            "id": "W3C Data Catalog"
+        },
+        {
+            "group": 5,
+            "id": "W3C Data eXchange Working Group"
+        },
+        {
+            "group": 1,
+            "id": "AEKOS ontology"
+        },
+        {
+            "group": 7,
+            "id": "Semantic Web for Earth and Environmental Terminology "
+        },
+        {
+            "group": 7,
+            "id": "Simple Knowledge Organization System"
+        },
+        {
+            "group": 7,
+            "id": "W3C Sensors Observations Sampling and Actuation vocabulary"
+        },
+        {
+            "group": 7,
+            "id": "W3C Semantic Sensor Network Ontology"
+        },
+        {
+            "group": 7,
+            "id": "SSN extensions"
+        },
+        {
+            "group": 7,
+            "id": "Darwin Core"
+        },
+        {
+            "group": 5,
+            "id": "Terrestrial Ecosystems Research Network"
+        },
+        {
+            "group": 7,
+            "id": "Environment Ontology"
+        },
+        {
+            "group": 10,
+            "id": "Simon Cox"
+        },
+        {
+            "group": 7,
+            "id": "PROMS"
+        },
+        {
+            "group": 1,
+            "id": "Bioregional Assessments"
+        },
+        {
+            "group": 7,
+            "id": "W3C Provenance Ontology"
+        },
+        {
+            "group": 1,
+            "id": "Energy Use Data Model - Workstream 5"
+        },
+        {
+            "group": 10,
+            "id": "Jonathan Yu"
+        },
+        {
+            "group": 10,
+            "id": "Sally Tetreault-Campbell"
+        },
+        {
+            "group": 10,
+            "id": "Nicholas Car"
+        },
+        {
+            "group": 7,
+            "id": "SISSvoc"
+        },
+        {
+            "group": 5,
+            "id": "Integrated Marine Observing System"
+        },
+        {
+            "group": 5,
+            "id": "Earth Science Information Partners"
+        },
+        {
+            "group": 7,
+            "id": "Research Vocabularies Australia"
+        },
+        {
+            "group": 7,
+            "id": "Linked Data Registry"
+        },
+        {
+            "group": 5,
+            "id": "National Aeronautics and Space Administration"
+        },
+        {
+            "group": 5,
+            "id": "US Geological Survey"
+        },
+        {
+            "group": 5,
+            "id": "National Oceanic and Atmospheric Administration"
+        },
+        {
+            "group": 5,
+            "id": "Environmental Informatics group"
+        },
+        {
+            "group": 5,
+            "id": "Land and Water business unit"
+        },
+        {
+            "group": 5,
+            "id": "Water Resource Management program"
+        },
+        {
+            "group": 7,
+            "id": "Profiling standards - description"
+        },
+        {
+            "group": 7,
+            "id": "OGC Observations and Measurements"
+        },
+        {
+            "group": 1,
+            "id": "Farmers Data Market"
+        },
+        {
+            "group": 10,
+            "id": "Paul Box"
+        },
+        {
+            "group": 10,
+            "id": "Ashlin Lee"
+        },
+        {
+            "group": 7,
+            "id": "Linked data registry 2"
+        },
+        {
+            "group": 7,
+            "id": "Knowledge Network"
+        },
+        {
+            "group": 1,
+            "id": "Project DAMbuster"
+        },
+        {
+            "group": 7,
+            "id": "CKAN"
+        },
+        {
+            "group": 10,
+            "id": "David Lemon"
+        },
+        {
+            "group": 7,
+            "id": "CSIRO Data Ratings"
+        },
+        {
+            "group": 7,
+            "id": "Excel2LDR"
+        },
+        {
+            "group": 5,
+            "id": "Biodiversity Information Standards (TDWG)"
+        },
+        {
+            "group": 5,
+            "id": "Open Knowledge International"
+        },
+        {
+            "group": 1,
+            "id": "SeaDataCloud"
+        },
+        {
+            "group": 1,
+            "id": "CRISP"
+        },
+        {
+            "group": 1,
+            "id": "Location integration capability"
+        },
+        {
+            "group": 5,
+            "id": "Australian Bureau of Statistics"
+        },
+        {
+            "group": 1,
+            "id": "L&W Data Access and Management Committee"
+        },
+        {
+            "group": 5,
+            "id": "Australian National Data Service"
+        },
+        {
+            "group": 5,
+            "id": "Earth and Environment Science Information Partners"
+        },
+        {
+            "group": 5,
+            "id": "Atlas of Living Australia"
+        },
+        {
+            "group": 5,
+            "id": "National Computational Infrastructure"
+        },
+        {
+            "group": 5,
+            "id": "Geoscience Australia"
+        },
+        {
+            "group": 5,
+            "id": "AuScope"
+        },
+        {
+            "group": 5,
+            "id": "Commonwealth Scientific and Industrial Research Organisation"
+        },
+        {
+            "group": 5,
+            "id": "Epimorphics "
+        },
+        {
+            "group": 5,
+            "id": "Energy business unit"
+        },
+        {
+            "group": 7,
+            "id": "RDF4J - formerly known as Sesame"
+        },
+        {
+            "group": 1,
+            "id": "CODATA Commission on Standards"
+        },
+        {
+            "group": 7,
+            "id": "DCAT plugin for CKAN"
+        },
+        {
+            "group": 7,
+            "id": "Findable, Accessible, Interoperable & Reusable"
+        },
+        {
+            "group": 7,
+            "id": "SISSvoc explorer"
+        },
+        {
+            "group": 5,
+            "id": "Open Geospatial Consortium"
+        },
+        {
+            "group": 7,
+            "id": "5-star data sharing assessment"
+        },
+        {
+            "group": 7,
+            "id": "Research Data Australia"
+        },
+        {
+            "group": 7,
+            "id": "CSIRO Data Access Portal"
+        },
+        {
+            "group": 1,
+            "id": "Northern Australia Water Resource Assessment"
+        },
+        {
+            "group": 7,
+            "id": "OBO Foundry biomedical ontologies"
+        },
+        {
+            "group": 1,
+            "id": "EPBC"
+        },
+        {
+            "group": 10,
+            "id": "Warwick McDonald"
+        },
+        {
+            "group": 1,
+            "id": "Planned Burns"
+        },
+        {
+            "group": 1,
+            "id": "Specialist expertise on geospatial data services"
+        },
+        {
+            "group": 1,
+            "id": "Essential Environmental Measures review"
+        },
+        {
+            "group": 5,
+            "id": "Department of the Environment and Energy"
+        },
+        {
+            "group": 1,
+            "id": "CSIRO Data Governance"
+        },
+        {
+            "group": 7,
+            "id": "Linked data registry 1"
+        },
+        {
+            "group": 7,
+            "id": "CSIRO Network"
+        },
+        {
+            "group": 1,
+            "id": "ASRIS"
+        },
+        {
+            "group": 10,
+            "id": "Peter Wilson"
+        },
+        {
+            "group": 10,
+            "id": "Linda Gregory"
+        }
+    ]
+}
