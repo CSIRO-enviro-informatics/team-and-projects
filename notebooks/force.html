@@ -11,9 +11,28 @@
   stroke: #fff;
   stroke-width: 1.5px;
 }
+div.tooltip {
+  position: absolute;
+  text-align: center;
+  width: 60px;
+  height: 28px;
+  padding: 2px;
+  font: 12px sans-serif;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+}
+.texts text {
+    font: san-serif;
+    }
+#chart1 {
+    width: 100%;
+    height: 100%;
+    }
 
 </style>
-<svg width="960" height="600"></svg>
+<div id='chart1'><svg width="960" height="600"></svg>
+</div>
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script>
 
@@ -25,20 +44,26 @@ var color = d3.scaleOrdinal(d3.schemeCategory20);
 
 var simulation = d3.forceSimulation()
     .force("link", d3.forceLink().id(function(d) { return d.id; }))
-    .force("charge", d3.forceManyBody())
+    .force("charge", d3.forceManyBody().strength(-80))
     .force("center", d3.forceCenter(width / 2, height / 2));
+var div = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+    
 
+
+    
 d3.json("data.json", function(error, graph) {
   if (error) throw error;
 
-  var link = svg.append("g")
+  const linkElements = svg.append("g")
       .attr("class", "links")
     .selectAll("line")
     .data(graph.links)
     .enter().append("line")
       .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
 
-  var node = svg.append("g")
+  const nodeElements = svg.append("g")
       .attr("class", "nodes")
     .selectAll("circle")
     .data(graph.nodes)
@@ -48,11 +73,23 @@ d3.json("data.json", function(error, graph) {
       .call(d3.drag()
           .on("start", dragstarted)
           .on("drag", dragged)
-          .on("end", dragended));
+          .on("end", dragended))
+       .on("mouseover", handleMouseOver)
+       .on("mouseout", handleMouseOut)
+       .on("click",selectNode);
 
-  node.append("title")
+  nodeElements.append("title")
       .text(function(d) { return d.id; });
-
+  var textElements = svg.append("g")
+  .attr("class", "texts")
+  .selectAll("text")
+  .data(graph.nodes)
+  .enter().append("text")
+    .text(function (node) { return  node.id })
+	  .attr("font-size", 15)
+	  .attr("dx", 15)
+    .attr("dy", 4)
+    
   simulation
       .nodes(graph.nodes)
       .on("tick", ticked);
@@ -60,17 +97,83 @@ d3.json("data.json", function(error, graph) {
   simulation.force("link")
       .links(graph.links);
 
+  var links = graph.links;
+    
+    resize();
+    d3.select(window).on("resize", resize);
   function ticked() {
-    link
+    linkElements
         .attr("x1", function(d) { return d.source.x; })
         .attr("y1", function(d) { return d.source.y; })
         .attr("x2", function(d) { return d.target.x; })
         .attr("y2", function(d) { return d.target.y; });
 
-    node
+    nodeElements
         .attr("cx", function(d) { return d.x; })
         .attr("cy", function(d) { return d.y; });
+    textElements
+      .attr('x', function (node) { return node.x })
+      .attr('y', function (node) { return node.y })
   }
+    
+function resize(){
+    //get width of window
+    //update xScale and rScale
+    //update radius of bubbles 
+  
+    var chart1 = d3.select("#chart1");
+    var height = chart1.node().getBoundingClientRect().height;
+    var width = chart1.node().getBoundingClientRect().width;
+        svg.attr("width", width).attr("height", height);
+
+    simulation.force("xAxis",d3.forceX(width/2))
+          .force("yAxis",d3.forceY(height/2))
+                .force("center", d3.forceCenter(width / 2, height / 2));
+
+}
+ 
+    
+  function getNeighbors(node) {
+      return links.reduce((neighbors, link) => {
+        if (link.target.id === node.id) {
+          neighbors.push(link.source.id)
+        } else if (link.source.id === node.id) {
+          neighbors.push(link.target.id)
+        }
+        return neighbors
+      }, [node.id])
+    }
+    function isNeighborLink(node, link) {
+      return link.target.id === node.id || link.source.id === node.id
+    }
+    function getNodeColor(node, neighbors) {
+        var test = neighbors.indexOf(node.id)
+        if (neighbors.indexOf(node.id) != -1) { //if node in neighbors
+           return 'green'
+        }
+        return 'red'
+    }
+    function getTextVisibility(node, neighbors) {
+      console.log(node);
+        if(neighbors.indexOf(node.id) != -1) {
+          return 'visible'
+        }
+      return 'hidden';
+    }
+    function getLinkColor(node, link) {
+      return isNeighborLink(node, link) ? 'green' : '#E5E5E5'
+    }
+    function selectNode(selectedNode) {
+      const neighbors = getNeighbors(selectedNode)
+      nodeElements
+        .attr('fill', node => getNodeColor(node, neighbors)) 
+      textElements
+        .attr('visibility', node => getTextVisibility(node, neighbors))
+      linkElements
+        .attr('stroke', link => getLinkColor(selectedNode, link))
+    }
+    
+    
 });
 
 function dragstarted(d) {
@@ -89,5 +192,27 @@ function dragended(d) {
   d.fx = null;
   d.fy = null;
 }
+    
+// Create Event Handlers for mouse
+function handleMouseOver(d, i) {  // Add interactivity
+          console.log(d);
+          console.log(i);
+          
 
+         div.transition()
+         .duration(200)
+         .style("opacity", .9);
+       div.html(d.id)
+         .style("left", (d3.event.pageX) + "px")
+         .style("top", (d3.event.pageY - 28) + "px");
+            
+}
+
+function handleMouseOut(d, i) {
+        div.transition()
+         .duration(500)
+         .style("opacity", 0);
+}
+
+    
 </script>
