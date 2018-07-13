@@ -37,7 +37,7 @@ eii:CF
   dcterms:relation eii:netCDF ;
   rdfs:label "netCDF CF conventions" ;
 .
-eii:L&W-Digital-Asset-Registry rdf:type eii:Technology ;
+eii:LW-Digital-Asset-Registry rdf:type eii:Technology ;
   rdfs:label "Land and Water Digital Asset Registry" ;
   prov:wasAttributedTo <http://id.csiro.au/person/jonathan.yu> ;
   prov:wasAttributedTo <http://id.csiro.au/person/ben.leighton> ;
