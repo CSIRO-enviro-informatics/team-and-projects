@@ -37,8 +37,20 @@ eii:CF
   dcterms:relation eii:netCDF ;
   rdfs:label "netCDF CF conventions" ;
 .
-eii:CKAN
-  rdf:type eii:Technology ;
+eii:L&W-Digital-Asset-Registry rdf:type eii:Technology ;
+  rdfs:label "Land and Water Digital Asset Registry" ;
+  prov:wasAttributedTo <http://id.csiro.au/person/jonathan.yu> ;
+  prov:wasAttributedTo <http://id.csiro.au/person/ben.leighton> ;
+  prov:wasAttributedTo orgunit:EII ;
+  prov:wasAttributedTo orgunit:EI ;
+.
+eii:AURIN rdf:type eii:Technology ;
+  rdfs:label "CSIRO AURIN stack" ;
+  prov:wasAttributedTo <http://id.csiro.au/person/jonathan.yu> ;
+  prov:wasAttributedTo <http://id.csiro.au/person/ben.leighton> ;
+  prov:wasAttributedTo orgunit:EII ;
+.
+eii:CKAN rdf:type eii:Technology ;
   rdfs:label "CKAN" ;
   prov:wasAttributedTo xorg:OpenKnowledge ;
   foaf:homepage <https://ckan.org/> ;
@@ -106,6 +118,10 @@ eii:KN
   rdf:type eii:Technology ;
   rdfs:label "Knowledge Network" ;
   prov:wasAttributedTo orgunit:EII ;
+  prov:wasAttributedTo orgunit:EI ;
+  prov:wasAttributedTo <http://id.csiro.au/person/jonathan.yu> ;
+  prov:wasAttributedTo <http://id.csiro.au/person/ben.leighton> ;
+  prov:wasAttributedTo <http://id.csiro.au/person/simon.cox> ;
 .
 eii:LDR
   rdf:type eii:Technology ;
@@ -671,9 +687,9 @@ project:EPBC
   proj:hasParticipant <http://id.csiro.au/person/paul.j.box> ;
   prov:used eii:Social-Architecture ;
 .
-project:EUDM-WS5
+project:EUDM
   rdf:type proj:Project ;
-  rdfs:label "Energy Use Data Model - Workstream 5" ;
+  rdfs:label "Energy Use Data Model" ;
   proj:hasParticipant <http://id.csiro.au/person/ben.leighton> ;
   proj:hasParticipant <http://id.csiro.au/person/jonathan.yu> ;
   proj:hasParticipant <http://id.csiro.au/person/nick.car> ;
