@@ -27,6 +27,11 @@ text {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 8pt;
 }
+#type-selector {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 8pt;
+}
+ 
     }
     #chart1 {
 	    width: 100%;
@@ -66,12 +71,28 @@ var div = d3.select("body").append("div")
 	.attr("class", "tooltip")
 	.style("opacity", 0);
 
+var typeSelectorArr = [
+    { id: "prov:Person", label: "Person" },
+    { id : "eii:Technology", label: "Technology" },
+    { id : "proj:Project", label: "Project" }    
+];
+    
+typeSelectorArr.forEach(function(d, i) {
+        //console.log(d);
+        //console.log(i);
+        $('#type-selector').append('<input type="radio" name="selectedType" value="' + d.id + '"> ' + d.label + '<br>');
+    });
 
 
 
 d3.json("data.json", function(error, graph) {
 	if (error) throw error;
 
+    graph.nodes.forEach(function(d, i) {
+        //console.log(d);
+        //console.log(i);
+    });
+    
 	const linkElements = svg.append("g")
 		.attr("class", "links")
 		.selectAll("line")
@@ -94,7 +115,8 @@ d3.json("data.json", function(error, graph) {
 		.attr("class", "nodes")
 		.selectAll("path")
 		.data(graph.nodes)
-		.enter().append("path")
+		.enter()
+        .append("path")
 		.attr('d', function(d) {
 			if(d.type.indexOf("prov:Person") != -1) {
 				return diamond;
@@ -137,6 +159,11 @@ d3.json("data.json", function(error, graph) {
 		.on("click",selectNode);
 
 	svg.on("click",svgReset);
+
+    $('input[type=radio][name=selectedType]').change(function() {
+        console.log(this.value);
+        selectNodeByType(this.value);
+    });
 
 	nodeElements.append("title")
 		.text(function(d) { return d.id; });
@@ -207,7 +234,7 @@ d3.json("data.json", function(error, graph) {
 		}
 		return "hidden";    
 	}
-	function getNeighbors(node) {
+    function getNeighbors(node) {
 		return links.reduce((neighbors, link) => {
 			if (link.target.id === node.id) {
 				neighbors.push(link.source.id)
@@ -242,7 +269,7 @@ d3.json("data.json", function(error, graph) {
 		return '0.1';
 	}
 	function getTextVisibility(node, neighbors) {
-		console.log(node);
+		//console.log(node);
 		if(neighbors.indexOf(node.id) != -1) {
 			return 'visible'
 		}
@@ -266,7 +293,55 @@ d3.json("data.json", function(error, graph) {
 			.attr('stroke', link => getLinkColor(selectedNode, link))
 		console.log("selectNode event fired");
 	}
-	function resetNodeOpacity(node) {
+	
+    
+    function selectNodeByType(typeStr) {
+
+		//const node = getNodesByType(typeStr, nodeElements);
+        var selectedNodes = []
+        var n = nodeElements.nodes();
+        nodeElements.filter(function(d) { 
+            if(d.type.indexOf(typeStr) != -1) {
+                selectedNodes.push(d);
+                return d; 
+            }
+        })
+		.attr('fill-opacity', "1.0") 
+		.attr('stroke-opacity', '1.0')
+        ;
+        
+        nodeElements.filter(function(d) { 
+            if(d.type.indexOf(typeStr) == -1) {
+                return d; 
+            }
+        })
+		.attr('fill-opacity', "0.1") 
+		.attr('stroke-opacity', '0.1') 
+        ;
+        
+        textElements.filter(function(d) { 
+            if(d.type.indexOf(typeStr) != -1) {
+                selectedNodes.push(d);
+                return d; 
+            }
+        })
+		.attr('visibility', "visible") 
+        ;
+        
+        textElements.filter(function(d) { 
+            if(d.type.indexOf(typeStr) == -1) {
+                return d; 
+            }
+        })
+		.attr('visibility', "hidden") 
+        ;
+        
+        
+        
+	}
+	
+    
+    function resetNodeOpacity(node) {
 		return '1.0'       
 	}
 	function resetStrokeOpacity(node) {
@@ -279,8 +354,6 @@ d3.json("data.json", function(error, graph) {
 		nodeElements
 			.attr('fill-opacity', node => resetStrokeOpacity(node)) 
 			.attr('stroke-opacity', node => resetStrokeOpacity(node)) 
-		console.log(a);
-		console.log(b);
 
 		textElements
 			.attr('visibility', showPeopleLabels)
@@ -300,17 +373,13 @@ function dragged(d) {
 }
 
 function dragended(d) {
-	if (!d3.event.active) simulation.alphaTarget(0);
-	d.fx = null;
-	d.fy = null;
+	//if (!d3.event.active) simulation.alphaTarget(0);
+	//d.fx = null;
+	//d.fy = null;
 }
 
 // Create Event Handlers for mouse
 function handleMouseOver(d, i) {  // Add interactivity
-	console.log(d);
-	console.log(i);
-
-
 	div.transition()
 		.duration(200)
 		.style("opacity", .9);
