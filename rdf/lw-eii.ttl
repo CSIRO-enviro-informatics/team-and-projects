@@ -37,40 +37,12 @@ eii:CF
   dcterms:relation eii:netCDF ;
   rdfs:label "netCDF CF conventions" ;
 .
-eii:Jenkins
-  rdf:type eii:Technology ;
-  dcterms:relation eii:L&W-Digital-Asset-Registry;
-  dcterms:relation eii:KnowledgeNetwork;
-  rdfs:label "Jenkins" ;
-.
-eii:Python
-  rdf:type eii:Technology ;
-  dcterms:relation eii:L&W-Digital-Asset-Registry ;
-  dcterms:relation eii:CKAN ;
-  rdfs:label "Python Language" ;
-.
-eii:React
-  rdf:type eii:Technology ;
-  dcterms:relation eii:KnowledgeNetwork ;
-  rdfs:label "React Javascript Library" ;
-.
-eii:C#
-  rdf:type eii:Technology ;
-  dcterms:relation eii:PlannedBurnsToolkit;
-  rdfs:label "C# Programming Language" ;
-.
-eii:L&W-Digital-Asset-Registry rdf:type eii:Technology ;
+eii:LW-Digital-Asset-Registry rdf:type eii:Technology ;
   rdfs:label "Land and Water Digital Asset Registry" ;
   prov:wasAttributedTo <http://id.csiro.au/person/jonathan.yu> ;
   prov:wasAttributedTo <http://id.csiro.au/person/ben.leighton> ;
   prov:wasAttributedTo orgunit:EII ;
   prov:wasAttributedTo orgunit:EI ;
-.
-eii:PlannedBurnsToolkit rdf:type eii:Technology ;
-  rdfs:label "Planned Burns Toolkit" ;
-  prov:wasAttributedTo <http://id.csiro.au/person/ben.leighton> ;
-  prov:wasAttributedTo orgunit:EII ;
-  prov:wasAttributedTo orgunit:LW ;
 .
 eii:AURIN rdf:type eii:Technology ;
   rdfs:label "CSIRO AURIN stack" ;
@@ -211,15 +183,11 @@ eii:Registry2ItCSIRO
   dcterms:requires eii:LDR ;
   rdfs:label "Linked data registry 2" ;
   foaf:homepage <http://registry2.it.csiro.au> ;
-  prov:wasAttributedTo orgunit:EII ;
-  prov:wasAttributedTo orgunit:EI ;
 .
 eii:RegistryItCSIRO
   rdf:type eii:Technology ;
   dcterms:requires eii:LDR ;
   rdfs:label "Linked data registry 1" ;
-  prov:wasAttributedTo orgunit:EII ;
-  prov:wasAttributedTo orgunit:EI ;
   foaf:homepage <http://registry.it.csiro.au> ;
 .
 eii:SISSvoc
