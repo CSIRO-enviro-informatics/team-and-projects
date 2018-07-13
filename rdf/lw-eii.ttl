@@ -4,6 +4,7 @@
 # imports: http://www.w3.org/ns/adms
 # imports: http://www.w3.org/ns/org
 # imports: http://www.w3.org/ns/project
+# imports: http://xmlns.com/foaf/0.1/
 
 @prefix adms: <http://www.w3.org/ns/adms#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -29,6 +30,11 @@
   owl:imports <http://www.w3.org/ns/adms> ;
   owl:imports <http://www.w3.org/ns/org> ;
   owl:imports <http://www.w3.org/ns/project> ;
+  owl:imports foaf: ;
+.
+eii:CF
+  rdf:type eii:Technology ;
+  rdfs:label "netCDF CF conventions" ;
 .
 eii:CKAN
   rdf:type eii:Technology ;
@@ -82,6 +88,11 @@ eii:FAIR
   rdf:type eii:Technology ;
   rdfs:label "Findable, Accessible, Interoperable & Reusable" ;
   foaf:homepage <https://www.go-fair.org/> ;
+.
+eii:Facility
+  rdf:type owl:Class ;
+  rdfs:label "Facility" ;
+  rdfs:subClassOf prov:Entity ;
 .
 eii:FiveStar
   rdf:type eii:Technology ;
@@ -211,6 +222,10 @@ eii:SWEET
   prov:wasAttributedTo xorg:NASA ;
   foaf:homepage <https://github.com/ESIPFed/sweet/> ;
 .
+eii:Social-Architecture
+  rdf:type eii:Technology ;
+  rdfs:label "Principles of social and economic structures" ;
+.
 eii:Technology
   rdf:type owl:Class ;
   rdfs:label "Technology or component" ;
@@ -221,10 +236,21 @@ eii:e2ldr
   rdfs:label "Excel2LDR" ;
   prov:wasAttributedTo orgunit:EII ;
 .
+eii:netCDF
+  rdf:type eii:Technology ;
+  rdfs:label "netCDF" ;
+  foaf:homepage <https://www.unidata.ucar.edu/software/netcdf/> ;
+.
 eii:rdf4j
   rdf:type eii:Technology ;
   rdfs:label "RDF4J - formerly known as Sesame" ;
   foaf:homepage <http://rdf4j.org/> ;
+.
+eii:uses
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain prov:Agent ;
+  rdfs:label "uses this technology" ;
+  rdfs:range prov:Entity ;
 .
 xorg:ABS
   rdf:type org:FormalOrganization ;
@@ -532,6 +558,7 @@ project:ANDS-Services
   proj:hasLeader <http://id.csiro.au/person/simon.cox> ;
   proj:hasParticipant <http://id.csiro.au/person/jonathan.yu> ;
   proj:hasSponsor xorg:ANDS ;
+  prov:used eii:DAP ;
   prov:used eii:DCAT-2014 ;
   prov:used eii:DCAT-rev ;
 .
@@ -546,7 +573,7 @@ project:ASRIS
   proj:hasLeader <http://id.csiro.au/person/peter.wilson> ;
   proj:hasParticipant <http://id.csiro.au/person/linda.gregory> ;
   proj:hasParticipant <http://id.csiro.au/person/simon.cox> ;
-  prov:used eii:LDR ;
+  prov:used eii:RegistryItCSIRO ;
   prov:used eii:SKOS ;
 .
 project:BA
@@ -554,8 +581,9 @@ project:BA
   rdfs:label "Bioregional Assessments" ;
   proj:hasParticipant <http://id.csiro.au/person/sally.tetreault-campbell> ;
   proj:hasParticipant <http://id.csiro.au/person/simon.cox> ;
-  prov:used eii:LDR ;
   prov:used eii:RVA ;
+  prov:used eii:Registry2ItCSIRO ;
+  prov:used eii:RegistryItCSIRO ;
   prov:used eii:SKOS ;
 .
 project:CODATA
@@ -577,6 +605,9 @@ project:CODATA
   proj:plannedEndTime "2020-06-30T24:00:00"^^xsd:dateTime ;
   proj:plannedStartTime "2017-07-01T00:00:00"^^xsd:dateTime ;
   prov:startedAtTime "2017-06-19T00:00:00"^^xsd:dateTime ;
+  prov:used eii:DCAT-rev ;
+  prov:used eii:FAIR ;
+  prov:used eii:SSN ;
 .
 project:CRISP
   rdf:type proj:Project ;
@@ -590,6 +621,12 @@ project:DAMC
   proj:hasParticipant <http://id.csiro.au/person/jonathan.yu> ;
   proj:hasParticipant <http://id.csiro.au/person/paul.j.box> ;
   proj:hasSponsor orgunit:LW ;
+  prov:used eii:CKAN ;
+  prov:used eii:DAP ;
+  prov:used eii:FAIR ;
+  prov:used eii:FiveStar ;
+  prov:used eii:KN ;
+  prov:used eii:Network ;
 .
 project:DAMbuster
   rdf:type proj:Project ;
@@ -620,6 +657,8 @@ project:DataGovernance
   proj:hasParticipant <http://id.csiro.au/person/david.lemon> ;
   proj:hasParticipant <http://id.csiro.au/person/paul.j.box> ;
   proj:hasSponsor orgunit:CSIRO ;
+  prov:used eii:DAP ;
+  prov:used eii:Social-Architecture ;
 .
 project:EEM
   rdf:type proj:Project ;
@@ -627,12 +666,14 @@ project:EEM
   proj:hasLeader <http://id.csiro.au/person/paul.j.box> ;
   proj:hasParticipant <http://id.csiro.au/person/david.lemon> ;
   proj:hasSponsor xorg:DOEE ;
+  prov:used eii:Social-Architecture ;
 .
 project:EPBC
   rdf:type proj:Project ;
   rdfs:label "EPBC" ;
   proj:hasLeader <http://id.csiro.au/person/paul.j.box> ;
   proj:hasParticipant <http://id.csiro.au/person/paul.j.box> ;
+  prov:used eii:Social-Architecture ;
 .
 project:EUDM-WS5
   rdf:type proj:Project ;
@@ -643,12 +684,16 @@ project:EUDM-WS5
   proj:hasParticipant <http://id.csiro.au/person/sally.tetreault-campbell> ;
   proj:hasParticipant <http://id.csiro.au/person/simon.cox> ;
   prov:generated eii:DCAT-rev ;
+  prov:used eii:DCAT-rev ;
+  prov:used eii:PROMS ;
+  prov:used eii:ProfDesc ;
 .
 project:FarmersDataMarket
   rdf:type proj:Project ;
   rdfs:label "Farmers Data Market" ;
   proj:hasParticipant <http://id.csiro.au/person/ashlin.lee> ;
   proj:hasParticipant <http://id.csiro.au/person/paul.j.box> ;
+  prov:used eii:Social-Architecture ;
 .
 project:LOC-I
   rdf:type proj:Project ;
@@ -658,6 +703,7 @@ project:LOC-I
   proj:hasParticipant <http://id.csiro.au/person/jonathan.yu> ;
   proj:hasParticipant <http://id.csiro.au/person/nick.car> ;
   proj:hasSponsor xorg:ABS ;
+  prov:used eii:Social-Architecture ;
 .
 project:NAWRA
   rdf:type proj:Project ;
