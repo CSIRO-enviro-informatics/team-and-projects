@@ -4,310 +4,327 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 .links line {
-  stroke: #999;
-  stroke-opacity: 0.6;
+	stroke: #999;
+	stroke-opacity: 0.6;
 }
 
 .nodes circle {
-  stroke: #fff;
-  stroke-width: 1.5px;
+	stroke: #fff;
+	stroke-width: 1.5px;
 }
 div.tooltip {
-  position: absolute;
-  text-align: center;
-  width: 60px;
-  height: 28px;
-  padding: 2px;
-  font: 12px sans-serif;
-  border: 0px;
-  border-radius: 8px;
-  pointer-events: none;
+	position: absolute;
+	text-align: center;
+	width: 60px;
+	height: 28px;
+	padding: 2px;
+	font: 12px sans-serif;
+	border: 0px;
+	border-radius: 8px;
+	pointer-events: none;
 }
 text {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 8pt;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 8pt;
 }
     }
-#chart1 {
-    width: 100%;
-    height: 100%;
+    #chart1 {
+	    width: 100%;
+	    height: 100%;
     }
 
 </style>
-<div id='chart1'><svg width="960" height="600"></svg>
+<div id='chart1'>
+	<div id="type-selector"></div>
+	<svg width="960" height="600">
+	</svg>
 </div>
 <script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script>
-
-var svg = d3.select("svg"),
-    width = svg.attr("width"),
-    height = svg.attr("height");
+	var svg = d3.select("svg"),
+	width = svg.attr("width"),
+	height = svg.attr("height");
 
 var color = d3.scaleOrdinal(d3.schemeCategory20);
 
 var simulation = d3.forceSimulation()
-    .force("link", d3.forceLink().id(function(d) { return d.id; }))    
-    .force("charge", d3.forceManyBody().strength(-120))
-    /*
+	.force("link", d3.forceLink().id(function(d) { return d.id; }))    
+	.force("charge", d3.forceManyBody().strength(-120))
+/*
     .force("charge",d3.forceManyBody().strength(function(d) {
-        console.log(d);
-         if(d.type.indexOf("prov:Person") != -1) {
-              return -300;
-          }
-        return -30;
+	console.log(d);
+	 if(d.type.indexOf("prov:Person") != -1) {
+	      return -300;
+	  }
+	return -30;
 
     }))    
-    */
-    .force("center", d3.forceCenter(width / 2, height / 2));
+ */
+	.force("center", d3.forceCenter(width / 2, height / 2));
 var div = d3.select("body").append("div")
-    .attr("class", "tooltip")
-    .style("opacity", 0);
-    
+	.attr("class", "tooltip")
+	.style("opacity", 0);
 
 
-    
+
+
 d3.json("data.json", function(error, graph) {
-  if (error) throw error;
+	if (error) throw error;
 
-  const linkElements = svg.append("g")
-      .attr("class", "links")
-    .selectAll("line")
-    .data(graph.links)
-    .enter().append("line")
-      .attr("stroke-width", function(d) { return Math.sqrt(d.value); });
-    var generateSymbol = function(s, size) {
-        var symbolGenerator = d3.symbol()
-                              .type(s)
-                              .size(size);
-        var pathData = symbolGenerator();
-        return pathData;
-      }
-    var diamond = generateSymbol(d3.symbolDiamond, 200);
-    var circle = generateSymbol(d3.symbolCircle, 80);
-    var square = generateSymbol(d3.symbolSquare, 80);
+	const linkElements = svg.append("g")
+		.attr("class", "links")
+		.selectAll("line")
+		.data(graph.links)
+		.enter().append("line")
+		.attr("stroke-width", function(d) { return Math.sqrt(d.value); });
+	var generateSymbol = function(s, size) {
+		var symbolGenerator = d3.symbol()
+			.type(s)
+			.size(size);
+		var pathData = symbolGenerator();
+		return pathData;
+	}
+	var diamond = generateSymbol(d3.symbolDiamond, 200);
+	var circle = generateSymbol(d3.symbolCircle, 80);
+	var square = generateSymbol(d3.symbolSquare, 80);
+    var triangle = generateSymbol(d3.symbolTriangle, 80);
     
-  const nodeElements = svg.append("g")
-      .attr("class", "nodes")
-    .selectAll("path")
-    .data(graph.nodes)
-  .enter().append("path")
-      .attr('d', function(d) {
-          if(d.type.indexOf("prov:Person") != -1) {
-              return diamond;
-          }
-		return circle;
-	})
-      .attr('stroke','#000')
-	  .attr('stroke-width',1)
-  .attr("fill", function(d) { 
-      var origcolor = '';
-      
-      if(d.type.indexOf("prov:Person") != -1) {
-           origcolor = "#90E2A9";
-      }
-      else {
-          origcolor =  color(d.group); 
-      }
-      
-      d.origcolor = origcolor;
-      return origcolor;
-  })
-      .call(d3.drag()
-          .on("start", dragstarted)
-          .on("drag", dragged)
-          .on("end", dragended))
-//       .on("mouseover", handleMouseOver)
-//       .on("mouseout", handleMouseOut)
-       .on("click",selectNode);
-  
-  svg.on("click",svgReset);
+	const nodeElements = svg.append("g")
+		.attr("class", "nodes")
+		.selectAll("path")
+		.data(graph.nodes)
+		.enter().append("path")
+		.attr('d', function(d) {
+			if(d.type.indexOf("prov:Person") != -1) {
+				return diamond;
+			}
+            if(d.type.indexOf("eii:Technology") != -1) {
+				return square;
+            }
+            if(d.type.indexOf("proj:Project") != -1) {
+				return triangle;
+            }
+            if(d.id == "Technology or component") {
+				return square;
+            }
+			return circle;
+		})
+		.attr('stroke','#000')
+		.attr('stroke-width',1)
+		.attr("fill", function(d) { 
+			var origcolor = '';
 
-  nodeElements.append("title")
-      .text(function(d) { return d.id; });
-  var textElements = svg.append("g")
-  .attr("class", "texts")
-  .selectAll("text")
-  .data(graph.nodes)
-  .enter().append("text")
-    .text(function (node) { return  node.id })
-	  .attr("visibility", showPeopleLabels)
-	  .attr("dx", 15)
-    .attr("dy", 4)
+			if(d.type.indexOf("prov:Person") != -1) {
+				origcolor = "#90E2A9";
+			}
+            else if(d.id == "Technology or component") {
+				origcolor = "#397edb";
+            }
+			else {
+				origcolor =  color(d.group); 
+			}
+
+			d.origcolor = origcolor;
+			return origcolor;
+		})
+		.call(d3.drag()
+			.on("start", dragstarted)
+			.on("drag", dragged)
+			.on("end", dragended))
+	//       .on("mouseover", handleMouseOver)
+	//       .on("mouseout", handleMouseOut)
+		.on("click",selectNode);
+
+	svg.on("click",svgReset);
+
+	nodeElements.append("title")
+		.text(function(d) { return d.id; });
     
-  simulation
-      .nodes(graph.nodes)
-      .on("tick", ticked);
+	var textElements = svg.append("g")
+		.attr("class", "texts")
+		.selectAll("text")
+		.data(graph.nodes)
+		.enter().append("text")
+		.text(function (node) { return  node.id })
+		.attr("visibility", showPeopleLabels)
+		.attr("dx", 15)
+		.attr("dy", 4)
 
-  simulation.force("link")
-      .links(graph.links);
+	simulation
+		.nodes(graph.nodes)
+		.on("tick", ticked);
 
-  var links = graph.links;
-    
-    resize();
-    d3.select(window).on("resize", resize);
-  function ticked() {
-      var w = svg.attr("width");
-      var h = svg.attr("height");
-      
-      svg.selectAll("path")
-      .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
-      
-    linkElements
-        .attr("x1", function(d) { return d.source.x; })
-        .attr("y1", function(d) { return d.source.y; })
-        .attr("x2", function(d) { return d.target.x; })
-        .attr("y2", function(d) { return d.target.y; });
+	simulation.force("link")
+		.links(graph.links);
 
-    //nodeElements
-    //    .attr("x", function(d) { return d.x; })
-     //   .attr("y", function(d) { return d.y; });
-        //.attr("cx", function(d) { return d.x; })
-        //.attr("cy", function(d) { return d.y; });
-    textElements
-      .attr('x', function (node) { return node.x })
-      .attr('y', function (node) { return node.y })
-  }
-    
-function resize(){
-    //get width of window
-    //update xScale and rScale
-    //update radius of bubbles 
-  
-    var chart1 = d3.select("#chart1");
-    var height = chart1.node().getBoundingClientRect().height;
-    var width = chart1.node().getBoundingClientRect().width;
-        svg.attr("width", width).attr("height", height);
+	var links = graph.links;
 
-    simulation.force("xAxis",d3.forceX(width/2))
-          .force("yAxis",d3.forceY(height/2))
-                .force("center", d3.forceCenter(width / 2, height / 2));
+	resize();
+	d3.select(window).on("resize", resize);
+	function ticked() {
+		var w = svg.attr("width");
+		var h = svg.attr("height");
 
-}
- 
-    function showPeopleLabels(d) {
-          if(d.type.indexOf("prov:Person") != -1) {
-              return "visible";
-          }
-          return "hidden";    
-    }
-    function getNeighbors(node) {
-      return links.reduce((neighbors, link) => {
-        if (link.target.id === node.id) {
-          neighbors.push(link.source.id)
-        } else if (link.source.id === node.id) {
-          neighbors.push(link.target.id)
-        }
-        return neighbors
-      }, [node.id])
-    }
-    function isNeighborLink(node, link) {
-      return link.target.id === node.id || link.source.id === node.id
-    }
-    function getNodeColor(node, neighbors) {
-        var test = neighbors.indexOf(node.id)
-        if (neighbors.indexOf(node.id) != -1) { //if node in neighbors
-           return node.origcolor;
-        }
-        return node.origcolor;
-    }
-     function getNodeOpacity(node, neighbors) {
-        var test = neighbors.indexOf(node.id)
-        if (neighbors.indexOf(node.id) != -1) { //if node in neighbors
-           return '1.0'
-        }
-        return '0.1';
-    }
-    function getStrokeOpacity(node, neighbors) {
-        var test = neighbors.indexOf(node.id)
-        if (neighbors.indexOf(node.id) != -1) { //if node in neighbors
-           return '1.0'
-        }
-        return '0.1';
-    }
-    function getTextVisibility(node, neighbors) {
-      console.log(node);
-        if(neighbors.indexOf(node.id) != -1) {
-          return 'visible'
-        }
-      return 'hidden';
-    }
-    function getLinkColor(node, link) {
-      return isNeighborLink(node, link) ? 'green' : '#E5E5E5'
-    }
-    function selectNode(selectedNode) {
-                  d3.event.stopPropagation();
+		svg.selectAll("path")
+			.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
 
-      const neighbors = getNeighbors(selectedNode)
-          nodeElements
-            .attr('fill', node => getNodeColor(node, neighbors)) 
-            .attr('fill-opacity', node => getNodeOpacity(node, neighbors)) 
-            .attr('stroke-opacity', node => getStrokeOpacity(node, neighbors)) 
+		linkElements
+			.attr("x1", function(d) { return d.source.x; })
+			.attr("y1", function(d) { return d.source.y; })
+			.attr("x2", function(d) { return d.target.x; })
+			.attr("y2", function(d) { return d.target.y; });
 
-          textElements
-            .attr('visibility', node => getTextVisibility(node, neighbors))
-          linkElements
-            .attr('stroke', link => getLinkColor(selectedNode, link))
-        console.log("selectNode event fired");
-    }
-     function resetNodeOpacity(node) {
-           return '1.0'       
-    }
-    function resetStrokeOpacity(node) {
-        return '1.0'        
-    }
-    function svgReset(a,b) {
-          d3.event.stopPropagation();
+		//nodeElements
+		//    .attr("x", function(d) { return d.x; })
+		//   .attr("y", function(d) { return d.y; });
+		//.attr("cx", function(d) { return d.x; })
+		//.attr("cy", function(d) { return d.y; });
+		textElements
+			.attr('x', function (node) { return node.x })
+			.attr('y', function (node) { return node.y })
+	}
 
-        console.log("svgReset event fired");
-        nodeElements
-        .attr('fill-opacity', node => resetStrokeOpacity(node)) 
-        .attr('stroke-opacity', node => resetStrokeOpacity(node)) 
-        console.log(a);
-        console.log(b);
-      
-          textElements
-            .attr('visibility', showPeopleLabels)
-    }
-    
+	function resize(){
+		//get width of window
+		//update xScale and rScale
+		//update radius of bubbles 
+
+		var chart1 = d3.select("#chart1");
+		var height = chart1.node().getBoundingClientRect().height;
+		var width = chart1.node().getBoundingClientRect().width;
+		svg.attr("width", width).attr("height", height);
+
+		simulation.force("xAxis",d3.forceX(width/2))
+			.force("yAxis",d3.forceY(height/2))
+			.force("center", d3.forceCenter(width / 2, height / 2));
+
+	}
+
+	function showPeopleLabels(d) {
+		if(d.type.indexOf("prov:Person") != -1) {
+			return "visible";
+		}
+		return "hidden";    
+	}
+	function getNeighbors(node) {
+		return links.reduce((neighbors, link) => {
+			if (link.target.id === node.id) {
+				neighbors.push(link.source.id)
+			} else if (link.source.id === node.id) {
+				neighbors.push(link.target.id)
+			}
+			return neighbors
+		}, [node.id])
+	}
+	function isNeighborLink(node, link) {
+		return link.target.id === node.id || link.source.id === node.id
+	}
+	function getNodeColor(node, neighbors) {
+		var test = neighbors.indexOf(node.id)
+		if (neighbors.indexOf(node.id) != -1) { //if node in neighbors
+			return node.origcolor;
+		}
+		return node.origcolor;
+	}
+	function getNodeOpacity(node, neighbors) {
+		var test = neighbors.indexOf(node.id)
+		if (neighbors.indexOf(node.id) != -1) { //if node in neighbors
+			return '1.0'
+		}
+		return '0.1';
+	}
+	function getStrokeOpacity(node, neighbors) {
+		var test = neighbors.indexOf(node.id)
+		if (neighbors.indexOf(node.id) != -1) { //if node in neighbors
+			return '1.0'
+		}
+		return '0.1';
+	}
+	function getTextVisibility(node, neighbors) {
+		console.log(node);
+		if(neighbors.indexOf(node.id) != -1) {
+			return 'visible'
+		}
+		return 'hidden';
+	}
+	function getLinkColor(node, link) {
+		return isNeighborLink(node, link) ? 'green' : '#E5E5E5'
+	}
+	function selectNode(selectedNode) {
+		d3.event.stopPropagation();
+
+		const neighbors = getNeighbors(selectedNode)
+		nodeElements
+			.attr('fill', node => getNodeColor(node, neighbors)) 
+			.attr('fill-opacity', node => getNodeOpacity(node, neighbors)) 
+			.attr('stroke-opacity', node => getStrokeOpacity(node, neighbors)) 
+
+		textElements
+			.attr('visibility', node => getTextVisibility(node, neighbors))
+		linkElements
+			.attr('stroke', link => getLinkColor(selectedNode, link))
+		console.log("selectNode event fired");
+	}
+	function resetNodeOpacity(node) {
+		return '1.0'       
+	}
+	function resetStrokeOpacity(node) {
+		return '1.0'        
+	}
+	function svgReset(a,b) {
+		d3.event.stopPropagation();
+
+		console.log("svgReset event fired");
+		nodeElements
+			.attr('fill-opacity', node => resetStrokeOpacity(node)) 
+			.attr('stroke-opacity', node => resetStrokeOpacity(node)) 
+		console.log(a);
+		console.log(b);
+
+		textElements
+			.attr('visibility', showPeopleLabels)
+	}
+
 });
 
 function dragstarted(d) {
-  if (!d3.event.active) simulation.alphaTarget(0.3).restart();
-  d.fx = d.x;
-  d.fy = d.y;
+	if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+	d.fx = d.x;
+	d.fy = d.y;
 }
 
 function dragged(d) {
-  d.fx = d3.event.x;
-  d.fy = d3.event.y;
+	d.fx = d3.event.x;
+	d.fy = d3.event.y;
 }
 
 function dragended(d) {
-  if (!d3.event.active) simulation.alphaTarget(0);
-  d.fx = null;
-  d.fy = null;
+	if (!d3.event.active) simulation.alphaTarget(0);
+	d.fx = null;
+	d.fy = null;
 }
-    
+
 // Create Event Handlers for mouse
 function handleMouseOver(d, i) {  // Add interactivity
-          console.log(d);
-          console.log(i);
-          
+	console.log(d);
+	console.log(i);
 
-         div.transition()
-         .duration(200)
-         .style("opacity", .9);
-       div.html(d.id)
-         .style("left", (d3.event.pageX) + "px")
-         .style("top", (d3.event.pageY - 28) + "px");
-            
+
+	div.transition()
+		.duration(200)
+		.style("opacity", .9);
+	div.html(d.id)
+		.style("left", (d3.event.pageX) + "px")
+		.style("top", (d3.event.pageY - 28) + "px");
+
 }
 
 function handleMouseOut(d, i) {
-        div.transition()
-         .duration(500)
-         .style("opacity", 0);
+	div.transition()
+		.duration(500)
+		.style("opacity", 0);
 }
 
-    
+
 </script>
