@@ -35,7 +35,7 @@
 eii:CF
   rdf:type eii:Technology ;
   dcterms:relation eii:netCDF ;
-  rdfs:label "netCDF CF conventions" ;
+  rdfs:label "netCDF-CF conventions" ;
 .
 eii:LW-Digital-Asset-Registry rdf:type eii:Technology ;
   rdfs:label "Land and Water Digital Asset Registry" ;
