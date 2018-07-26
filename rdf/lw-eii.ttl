@@ -7,13 +7,13 @@
 # imports: http://xmlns.com/foaf/0.1/
 
 @prefix adms: <http://www.w3.org/ns/adms#> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dct: <http://purl.org/dc/terms/> .
 @prefix eii: <http://id.csiro.au/dataset/lw-eii/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix net: <http://network.csiro.au/data/> .
 @prefix org: <http://www.w3.org/ns/org#> .
 @prefix orgunit: <http://id.csiro.au/orgunit/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix person: <http://id.csiro.au/person/> .
 @prefix proj: <http://www.w3.org/ns/project#> .
 @prefix project: <http://id.csiro.au/project/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -25,67 +25,39 @@
 
 <http://id.csiro.au/dataset/lw-eii>
   rdf:type owl:Ontology ;
-  owl:imports dcterms: ;
+  owl:imports dct: ;
   owl:imports <http://www.w3.org/2004/02/skos/core> ;
   owl:imports <http://www.w3.org/ns/adms> ;
   owl:imports <http://www.w3.org/ns/org> ;
   owl:imports <http://www.w3.org/ns/project> ;
   owl:imports foaf: ;
 .
-eii:CF
+eii:AURIN
   rdf:type eii:Technology ;
-  dcterms:relation eii:netCDF ;
-  rdfs:label "netCDF CF conventions" ;
+  rdfs:label "CSIRO AURIN stack" ;
+  prov:wasAttributedTo orgunit:EII ;
+  prov:wasAttributedTo <http://network.csiro.au/data/ben.leighton> ;
+  prov:wasAttributedTo <http://network.csiro.au/data/jonathan.yu> ;
 .
-eii:Jenkins
+eii:C
   rdf:type eii:Technology ;
-  dcterms:relation eii:L&W-Digital-Asset-Registry ;
-  dcterms:relation eii:KnowledgeNetwork ;
-  rdfs:label "Jenkins" ;
-.
-eii:Python
-  rdf:type eii:Technology ;
-  dcterms:relation eii:L&W-Digital-Asset-Registry ;
-  dcterms:relation eii:CKAN ;
-  rdfs:label "Python Language" ;
-.
-eii:React
-  rdf:type eii:Technology ;
-  dcterms:relation eii:KnowledgeNetwork ;
-  rdfs:label "React Javascript Library" ;
-.
-eii:C#
-  rdf:type eii:Technology ;
-  dcterms:relation eii:PlannedBurnsToolkit;
+  dct:relation eii:PlannedBurnsToolkit ;
   rdfs:label "C# Programming Language" ;
 .
-eii:L&W-Digital-Asset-Registry rdf:type eii:Technology ;
-  rdfs:label "Land and Water Digital Asset Registry" ;
-  prov:wasAttributedTo <http://id.csiro.au/person/jonathan.yu> ;
-  prov:wasAttributedTo <http://id.csiro.au/person/ben.leighton> ;
-  prov:wasAttributedTo orgunit:EII ;
-  prov:wasAttributedTo orgunit:EI ;
+eii:CF
+  rdf:type eii:Technology ;
+  dct:relation eii:netCDF ;
+  rdfs:label "netCDF CF conventions" ;
 .
-eii:PlannedBurnsToolkit rdf:type eii:Technology ;
-  rdfs:label "Planned Burns Toolkit" ;
-  prov:wasAttributedTo <http://id.csiro.au/person/ben.leighton> ;
-  prov:wasAttributedTo orgunit:EII ;
-  prov:wasAttributedTo orgunit:LW ;
-.
-eii:AURIN rdf:type eii:Technology ;
-  rdfs:label "CSIRO AURIN stack" ;
-  prov:wasAttributedTo <http://id.csiro.au/person/jonathan.yu> ;
-  prov:wasAttributedTo <http://id.csiro.au/person/ben.leighton> ;
-  prov:wasAttributedTo orgunit:EII ;
-.
-eii:CKAN rdf:type eii:Technology ;
+eii:CKAN
+  rdf:type eii:Technology ;
   rdfs:label "CKAN" ;
   prov:wasAttributedTo xorg:OpenKnowledge ;
   foaf:homepage <https://ckan.org/> ;
 .
 eii:CKAN-DCAT
   rdf:type eii:Technology ;
-  dcterms:requires eii:CKAN ;
+  dct:requires eii:CKAN ;
   rdfs:label "DCAT plugin for CKAN" ;
   foaf:homepage <https://github.com/ckan/ckanext-dcat> ;
 .
@@ -142,20 +114,34 @@ eii:FiveStar
   prov:wasDerivedFrom eii:DataRatings ;
   foaf:homepage <http://oznome.csiro.au/5star/> ;
 .
+eii:Jenkins
+  rdf:type eii:Technology ;
+  dct:relation eii:KnowledgeNetwork ;
+  dct:relation eii:LW-Digital-Asset-Registry ;
+  rdfs:label "Jenkins" ;
+.
 eii:KN
   rdf:type eii:Technology ;
   rdfs:label "Knowledge Network" ;
-  prov:wasAttributedTo orgunit:EII ;
   prov:wasAttributedTo orgunit:EI ;
-  prov:wasAttributedTo <http://id.csiro.au/person/jonathan.yu> ;
-  prov:wasAttributedTo <http://id.csiro.au/person/ben.leighton> ;
-  prov:wasAttributedTo <http://id.csiro.au/person/simon.cox> ;
+  prov:wasAttributedTo orgunit:EII ;
+  prov:wasAttributedTo <http://network.csiro.au/data/ben.leighton> ;
+  prov:wasAttributedTo <http://network.csiro.au/data/jonathan.yu> ;
+  prov:wasAttributedTo <http://network.csiro.au/data/simon.cox> ;
 .
 eii:LDR
   rdf:type eii:Technology ;
   rdfs:label "Linked Data Registry" ;
   prov:wasAttributedTo xorg:Epimorphics ;
   foaf:homepage <https://github.com/UKGovLD/registry-core> ;
+.
+eii:LW-Digital-Asset-Registry
+  rdf:type eii:Technology ;
+  rdfs:label "Land and Water Digital Asset Registry" ;
+  prov:wasAttributedTo orgunit:EI ;
+  prov:wasAttributedTo orgunit:EII ;
+  prov:wasAttributedTo <http://network.csiro.au/data/ben.leighton> ;
+  prov:wasAttributedTo <http://network.csiro.au/data/jonathan.yu> ;
 .
 eii:Network
   rdf:type eii:Technology ;
@@ -176,7 +162,7 @@ eii:OandM
 .
 eii:PROMS
   rdf:type eii:Technology ;
-  dcterms:requires eii:PROV-O ;
+  dct:requires eii:PROV-O ;
   rdfs:label "PROMS" ;
   prov:wasGeneratedBy project:BA ;
   foaf:homepage <https://promsns.org/def/proms/proms.html> ;
@@ -187,11 +173,24 @@ eii:PROV-O
   prov:wasAttributedTo xorg:W3C ;
   foaf:homepage <https://www.w3.org/TR/prov-o/> ;
 .
+eii:PlannedBurnsToolkit
+  rdf:type eii:Technology ;
+  rdfs:label "Planned Burns Toolkit" ;
+  prov:wasAttributedTo orgunit:EII ;
+  prov:wasAttributedTo orgunit:LW ;
+  prov:wasAttributedTo <http://network.csiro.au/data/ben.leighton> ;
+.
 eii:ProfDesc
   rdf:type eii:Technology ;
   rdfs:label "Profiling standards - description" ;
   prov:wasAttributedTo xorg:DXWG ;
   foaf:homepage <https://github.com/w3c/dxwg/tree/gh-pages/profiledesc> ;
+.
+eii:Python
+  rdf:type eii:Technology ;
+  dct:relation eii:CKAN ;
+  dct:relation eii:LW-Digital-Asset-Registry ;
+  rdfs:label "Python Language" ;
 .
 eii:RDA
   rdf:type eii:Technology ;
@@ -206,34 +205,39 @@ eii:RVA
   prov:wasDerivedFrom eii:SISSvoc ;
   foaf:homepage <https://vocabs.ands.org.au/> ;
 .
+eii:React
+  rdf:type eii:Technology ;
+  dct:relation eii:KnowledgeNetwork ;
+  rdfs:label "React Javascript Library" ;
+.
 eii:Registry2ItCSIRO
   rdf:type eii:Technology ;
-  dcterms:requires eii:LDR ;
+  dct:requires eii:LDR ;
   rdfs:label "Linked data registry 2" ;
-  foaf:homepage <http://registry2.it.csiro.au> ;
-  prov:wasAttributedTo orgunit:EII ;
   prov:wasAttributedTo orgunit:EI ;
+  prov:wasAttributedTo orgunit:EII ;
+  foaf:homepage <http://registry2.it.csiro.au> ;
 .
 eii:RegistryItCSIRO
   rdf:type eii:Technology ;
-  dcterms:requires eii:LDR ;
+  dct:requires eii:LDR ;
   rdfs:label "Linked data registry 1" ;
-  prov:wasAttributedTo orgunit:EII ;
   prov:wasAttributedTo orgunit:EI ;
+  prov:wasAttributedTo orgunit:EII ;
   foaf:homepage <http://registry.it.csiro.au> ;
 .
 eii:SISSvoc
   rdf:type eii:Technology ;
-  dcterms:requires eii:SKOS ;
+  dct:requires eii:SKOS ;
   rdfs:label "SISSvoc" ;
-  prov:wasAttributedTo <http://id.csiro.au/person/jonathan.yu> ;
-  prov:wasAttributedTo <http://id.csiro.au/person/simon.cox> ;
+  prov:wasAttributedTo <http://network.csiro.au/data/jonathan.yu> ;
+  prov:wasAttributedTo <http://network.csiro.au/data/simon.cox> ;
   foaf:homepage <https://github.com/SISS/SISSVoc> ;
 .
 eii:SISSvoc-explorer
   rdf:type eii:Technology ;
   rdfs:label "SISSvoc explorer" ;
-  prov:wasAttributedTo <http://id.csiro.au/person/jonathan.yu> ;
+  prov:wasAttributedTo <http://network.csiro.au/data/jonathan.yu> ;
   prov:wasDerivedFrom eii:SISSvoc ;
 .
 eii:SKOS
@@ -259,7 +263,7 @@ eii:SSN
 eii:SSN-ext
   rdf:type eii:Technology ;
   rdfs:label "SSN extensions" ;
-  prov:wasAttributedTo <http://id.csiro.au/person/simon.cox> ;
+  prov:wasAttributedTo <http://network.csiro.au/data/simon.cox> ;
   prov:wasDerivedFrom eii:SOSA ;
   prov:wasDerivedFrom eii:SSN ;
   foaf:homepage <https://w3c.github.io/sdw/proposals/ssn-extensions/> ;
@@ -304,7 +308,7 @@ eii:uses
 xorg:ABS
   rdf:type org:FormalOrganization ;
   rdf:type prov:Organization ;
-  dcterms:identifier <http://test.linked.data.gov.au/org/O-000928> ;
+  dct:identifier <http://test.linked.data.gov.au/org/O-000928> ;
   rdfs:label "Australian Bureau of Statistics" ;
   foaf:homepage <http://abs.gov.au/> ;
 .
@@ -335,14 +339,14 @@ xorg:AuScope
 xorg:BOM
   rdf:type org:FormalOrganization ;
   rdf:type prov:Organization ;
-  dcterms:identifier <http://test.linked.data.gov.au/org/O-000843> ;
+  dct:identifier <http://test.linked.data.gov.au/org/O-000843> ;
   rdfs:label "Bureau of Meteorology" ;
   foaf:homepage <http://www.bom.gov.au/> ;
 .
 xorg:DOEE
   rdf:type org:FormalOrganization ;
   rdf:type prov:Organization ;
-  dcterms:identifier <http://test.linked.data.gov.au/org/O-000841> ;
+  dct:identifier <http://test.linked.data.gov.au/org/O-000841> ;
   rdfs:label "Department of the Environment and Energy" ;
   foaf:homepage <https://www.environment.gov.au/> ;
 .
@@ -386,7 +390,7 @@ xorg:Epimorphics
 xorg:GA
   rdf:type org:FormalOrganization ;
   rdf:type prov:Organization ;
-  dcterms:identifier <http://test.linked.data.gov.au/org/O-000887> ;
+  dct:identifier <http://test.linked.data.gov.au/org/O-000887> ;
   rdfs:label "Geoscience Australia" ;
   foaf:homepage <http://www.ga.gov.au/> ;
 .
@@ -466,7 +470,7 @@ xorg:W3C
 orgunit:CSIRO
   rdf:type org:FormalOrganization ;
   rdf:type prov:Organization ;
-  dcterms:identifier <http://test.linked.data.gov.au/org/O-000886> ;
+  dct:identifier <http://test.linked.data.gov.au/org/O-000886> ;
   rdfs:label "Commonwealth Scientific and Industrial Research Organisation" ;
   org:hasUnit orgunit:Energy ;
   org:hasUnit orgunit:LW ;
@@ -501,73 +505,6 @@ orgunit:WRM
   rdfs:label "Water Resource Management program" ;
   org:hasUnit orgunit:EI ;
 .
-<http://id.csiro.au/person/ashlin.lee>
-  rdf:type prov:Person ;
-  rdfs:label "Ashlin Lee" ;
-  org:memberOf orgunit:EII ;
-  org:reportsTo <http://id.csiro.au/person/paul.j.box> ;
-.
-<http://id.csiro.au/person/ben.leighton>
-  rdf:type prov:Person ;
-  rdfs:label "Ben Leighton" ;
-  org:memberOf orgunit:EII ;
-.
-<http://id.csiro.au/person/david.lemon>
-  rdf:type prov:Person ;
-  rdfs:label "David Lemon" ;
-  org:headOf orgunit:EI ;
-.
-<http://id.csiro.au/person/jean-michel.perraud>
-  rdf:type prov:Person ;
-  rdfs:label "Jean-Michel Perraud" ;
-.
-<http://id.csiro.au/person/jonathan.yu>
-  rdf:type prov:Person ;
-  rdfs:label "Jonathan Yu" ;
-  org:memberOf orgunit:EII ;
-.
-<http://id.csiro.au/person/matt.stenson>
-  rdf:type prov:Person ;
-  rdfs:label "Matt Stenson" ;
-.
-<http://id.csiro.au/person/nick.car>
-  rdf:type prov:Person ;
-  rdfs:label "Nicholas Car" ;
-.
-<http://id.csiro.au/person/paul.j.box>
-  rdf:type prov:Person ;
-  rdfs:label "Paul Box" ;
-  org:memberOf orgunit:EII ;
-.
-<http://id.csiro.au/person/peter.fitch>
-  rdf:type prov:Person ;
-  rdfs:label "Peter Fitch" ;
-.
-<http://id.csiro.au/person/peter.wilson>
-  rdf:type prov:Person ;
-  rdfs:label "Peter Wilson" ;
-.
-<http://id.csiro.au/person/sally.tetreault-campbell>
-  rdf:type prov:Person ;
-  rdfs:label "Sally Tetreault-Campbell" ;
-  org:memberOf orgunit:EII ;
-.
-<http://id.csiro.au/person/simon.cox>
-  rdf:type prov:Person ;
-  rdfs:label "Simon Cox" ;
-  org:headOf orgunit:EII ;
-  org:memberOf orgunit:EII ;
-  foaf:account <http://www.researcherid.com/rid/C-5791-2011> ;
-  foaf:account <https://orcid.org/0000-0002-3884-3420> ;
-  foaf:account <https://scholar.google.com.au/citations?user=4ju7O2AAAAAJ> ;
-  foaf:familyName "Cox" ;
-  foaf:workplaceHomepage <https://people.csiro.au/C/S/Simon-Cox> ;
-.
-<http://id.csiro.au/person/warwick.mcdonald>
-  rdf:type prov:Person ;
-  rdfs:label "Warwick McDonald" ;
-  org:headOf orgunit:WRM ;
-.
 project:AEKOS
   rdf:type proj:Project ;
   rdfs:label "AEKOS ontology" ;
@@ -577,7 +514,7 @@ project:AEKOS
 """ ;
       adms:schemeAgency "CSIRO Dynamics" ;
     ] ;
-  proj:hasLeader <http://id.csiro.au/person/simon.cox> ;
+  proj:hasLeader <http://network.csiro.au/data/simon.cox> ;
   proj:hasSponsor xorg:TERN ;
   prov:used eii:DWC ;
   prov:used eii:ENVO ;
@@ -600,8 +537,8 @@ project:ANDS-Services
       skos:notation "R-90200-29" ;
       adms:schemeAgency "CSIRO SAP" ;
     ] ;
-  proj:hasLeader <http://id.csiro.au/person/simon.cox> ;
-  proj:hasParticipant <http://id.csiro.au/person/jonathan.yu> ;
+  proj:hasLeader <http://network.csiro.au/data/simon.cox> ;
+  proj:hasParticipant <http://network.csiro.au/data/jonathan.yu> ;
   proj:hasSponsor xorg:ANDS ;
   prov:used eii:DAP ;
   prov:used eii:DCAT-2014 ;
@@ -615,16 +552,16 @@ project:ASRIS
       skos:notation "R-07807" ;
       adms:schemeAgency "CSIRO SAP" ;
     ] ;
-  proj:hasLeader <http://id.csiro.au/person/peter.wilson> ;
-  proj:hasParticipant <http://id.csiro.au/person/simon.cox> ;
+  proj:hasLeader <http://network.csiro.au/data/peter.wilson> ;
+  proj:hasParticipant <http://network.csiro.au/data/simon.cox> ;
   prov:used eii:RegistryItCSIRO ;
   prov:used eii:SKOS ;
 .
 project:BA
   rdf:type proj:Project ;
   rdfs:label "Bioregional Assessments" ;
-  proj:hasParticipant <http://id.csiro.au/person/sally.tetreault-campbell> ;
-  proj:hasParticipant <http://id.csiro.au/person/simon.cox> ;
+  proj:hasParticipant <http://network.csiro.au/data/sally.tetreault-campbell> ;
+  proj:hasParticipant <http://network.csiro.au/data/simon.cox> ;
   prov:used eii:RVA ;
   prov:used eii:Registry2ItCSIRO ;
   prov:used eii:RegistryItCSIRO ;
@@ -644,7 +581,7 @@ project:CODATA
       skos:notation "R-11749-01" ;
       adms:schemeAgency "CSIRO SAP" ;
     ] ;
-  proj:hasLeader <http://id.csiro.au/person/simon.cox> ;
+  proj:hasLeader <http://network.csiro.au/data/simon.cox> ;
   proj:hasSponsor orgunit:CSIRO ;
   proj:plannedEndTime "2020-06-30T24:00:00"^^xsd:dateTime ;
   proj:plannedStartTime "2017-07-01T00:00:00"^^xsd:dateTime ;
@@ -656,14 +593,14 @@ project:CODATA
 project:CRISP
   rdf:type proj:Project ;
   rdfs:label "CRISP" ;
-  proj:hasParticipant <http://id.csiro.au/person/paul.j.box> ;
+  proj:hasParticipant <http://network.csiro.au/data/paul.j.box> ;
 .
 project:DAMC
   rdf:type proj:Project ;
   rdfs:label "L&W Data Access and Management Committee" ;
-  proj:hasParticipant <http://id.csiro.au/person/david.lemon> ;
-  proj:hasParticipant <http://id.csiro.au/person/jonathan.yu> ;
-  proj:hasParticipant <http://id.csiro.au/person/paul.j.box> ;
+  proj:hasParticipant <http://network.csiro.au/data/david.lemon> ;
+  proj:hasParticipant <http://network.csiro.au/data/jonathan.yu> ;
+  proj:hasParticipant <http://network.csiro.au/data/paul.j.box> ;
   proj:hasSponsor orgunit:LW ;
   prov:used eii:CKAN ;
   prov:used eii:DAP ;
@@ -680,11 +617,11 @@ project:DAMbuster
       skos:notation "R-08844" ;
       adms:schemeAgency "CSIRO SAP" ;
     ] ;
-  proj:hasLeader <http://id.csiro.au/person/jonathan.yu> ;
-  proj:hasParticipant <http://id.csiro.au/person/ben.leighton> ;
-  proj:hasParticipant <http://id.csiro.au/person/david.lemon> ;
-  proj:hasParticipant <http://id.csiro.au/person/paul.j.box> ;
-  proj:hasParticipant <http://id.csiro.au/person/simon.cox> ;
+  proj:hasLeader <http://network.csiro.au/data/jonathan.yu> ;
+  proj:hasParticipant <http://network.csiro.au/data/ben.leighton> ;
+  proj:hasParticipant <http://network.csiro.au/data/david.lemon> ;
+  proj:hasParticipant <http://network.csiro.au/data/paul.j.box> ;
+  proj:hasParticipant <http://network.csiro.au/data/simon.cox> ;
   proj:hasSponsor orgunit:WRM ;
   proj:plannedStartTime "2017-07-01T00:00:00"^^xsd:dateTime ;
   prov:generated eii:DCAT-rev ;
@@ -698,8 +635,8 @@ project:DAMbuster
 project:DataGovernance
   rdf:type proj:Project ;
   rdfs:label "CSIRO Data Governance" ;
-  proj:hasParticipant <http://id.csiro.au/person/david.lemon> ;
-  proj:hasParticipant <http://id.csiro.au/person/paul.j.box> ;
+  proj:hasParticipant <http://network.csiro.au/data/david.lemon> ;
+  proj:hasParticipant <http://network.csiro.au/data/paul.j.box> ;
   proj:hasSponsor orgunit:CSIRO ;
   prov:used eii:DAP ;
   prov:used eii:Social-Architecture ;
@@ -707,26 +644,26 @@ project:DataGovernance
 project:EEM
   rdf:type proj:Project ;
   rdfs:label "Essential Environmental Measures review" ;
-  proj:hasLeader <http://id.csiro.au/person/paul.j.box> ;
-  proj:hasParticipant <http://id.csiro.au/person/david.lemon> ;
+  proj:hasLeader <http://network.csiro.au/data/paul.j.box> ;
+  proj:hasParticipant <http://network.csiro.au/data/david.lemon> ;
   proj:hasSponsor xorg:DOEE ;
   prov:used eii:Social-Architecture ;
 .
 project:EPBC
   rdf:type proj:Project ;
   rdfs:label "EPBC" ;
-  proj:hasLeader <http://id.csiro.au/person/paul.j.box> ;
-  proj:hasParticipant <http://id.csiro.au/person/paul.j.box> ;
+  proj:hasLeader <http://network.csiro.au/data/paul.j.box> ;
+  proj:hasParticipant <http://network.csiro.au/data/paul.j.box> ;
   prov:used eii:Social-Architecture ;
 .
 project:EUDM
   rdf:type proj:Project ;
   rdfs:label "Energy Use Data Model" ;
-  proj:hasParticipant <http://id.csiro.au/person/ben.leighton> ;
-  proj:hasParticipant <http://id.csiro.au/person/jonathan.yu> ;
-  proj:hasParticipant <http://id.csiro.au/person/nick.car> ;
-  proj:hasParticipant <http://id.csiro.au/person/sally.tetreault-campbell> ;
-  proj:hasParticipant <http://id.csiro.au/person/simon.cox> ;
+  proj:hasParticipant <http://network.csiro.au/data/ben.leighton> ;
+  proj:hasParticipant <http://network.csiro.au/data/jonathan.yu> ;
+  proj:hasParticipant <http://network.csiro.au/data/nick.car> ;
+  proj:hasParticipant <http://network.csiro.au/data/sally.tetreault-campbell> ;
+  proj:hasParticipant <http://network.csiro.au/data/simon.cox> ;
   prov:generated eii:DCAT-rev ;
   prov:used eii:DCAT-rev ;
   prov:used eii:PROMS ;
@@ -735,29 +672,29 @@ project:EUDM
 project:FarmersDataMarket
   rdf:type proj:Project ;
   rdfs:label "Farmers Data Market" ;
-  proj:hasParticipant <http://id.csiro.au/person/ashlin.lee> ;
-  proj:hasParticipant <http://id.csiro.au/person/paul.j.box> ;
+  proj:hasParticipant <http://network.csiro.au/data/ashlin.lee> ;
+  proj:hasParticipant <http://network.csiro.au/data/paul.j.box> ;
   prov:used eii:Social-Architecture ;
 .
 project:LOC-I
   rdf:type proj:Project ;
   rdfs:label "Location integration capability" ;
-  proj:hasLeader <http://id.csiro.au/person/paul.j.box> ;
-  proj:hasParticipant <http://id.csiro.au/person/david.lemon> ;
-  proj:hasParticipant <http://id.csiro.au/person/jonathan.yu> ;
-  proj:hasParticipant <http://id.csiro.au/person/nick.car> ;
+  proj:hasLeader <http://network.csiro.au/data/paul.j.box> ;
+  proj:hasParticipant <http://network.csiro.au/data/david.lemon> ;
+  proj:hasParticipant <http://network.csiro.au/data/jonathan.yu> ;
+  proj:hasParticipant <http://network.csiro.au/data/nick.car> ;
   proj:hasSponsor xorg:ABS ;
   prov:used eii:Social-Architecture ;
 .
 project:NAWRA
   rdf:type proj:Project ;
   rdfs:label "Northern Australia Water Resource Assessment" ;
-  proj:hasParticipant <http://id.csiro.au/person/sally.tetreault-campbell> ;
+  proj:hasParticipant <http://network.csiro.au/data/sally.tetreault-campbell> ;
 .
 project:PlannedBurns
   rdf:type proj:Project ;
   rdfs:label "Planned Burns" ;
-  proj:hasParticipant <http://id.csiro.au/person/ben.leighton> ;
+  proj:hasParticipant <http://network.csiro.au/data/ben.leighton> ;
 .
 project:SeaDataCloud
   rdf:type proj:Project ;
@@ -772,8 +709,108 @@ project:SeaDataCloud
       skos:notation "R-10005" ;
       adms:schemeAgency "CSIRO SAP" ;
     ] ;
-  proj:hasLeader <http://id.csiro.au/person/simon.cox> ;
+  proj:hasLeader <http://network.csiro.au/data/simon.cox> ;
   prov:used eii:OandM ;
   prov:used eii:SISSvoc ;
   prov:used eii:SKOS ;
+.
+<http://network.csiro.au/data/ashlin.lee>
+  rdf:type prov:Person ;
+  rdfs:label "Ashlin Lee" ;
+  org:memberOf orgunit:EII ;
+  org:reportsTo <http://network.csiro.au/data/paul.j.box> ;
+  foaf:mbox <mailto:ashlin.lee@csiro.au> ;
+.
+<http://network.csiro.au/data/ben.leighton>
+  rdf:type prov:Person ;
+  rdfs:label "Ben Leighton" ;
+  org:memberOf orgunit:EII ;
+  foaf:mbox <mailto:ben.leighton@csiro.au> ;
+.
+<http://network.csiro.au/data/david.lemon>
+  rdf:type prov:Person ;
+  rdfs:label "David Lemon" ;
+  org:headOf orgunit:EI ;
+  foaf:mbox <mailto:david.lemon@csiro.au> ;
+.
+<http://network.csiro.au/data/jean-michel.perraud>
+  rdf:type prov:Person ;
+  rdfs:label "Jean-Michel Perraud" ;
+  foaf:mbox <mailto:jean-michel.perraud@csiro.au> ;
+.
+<http://network.csiro.au/data/jonathan.yu>
+  rdf:type prov:Person ;
+  rdfs:label "Jonathan Yu" ;
+  org:memberOf orgunit:EII ;
+  foaf:mbox <mailto:jonathan.yu@csiro.au> ;
+.
+<http://network.csiro.au/data/matthew.stenson>
+  rdf:type prov:Person ;
+  rdfs:label "Matt Stenson" ;
+  foaf:mbox <mailto:matthew.stenson@csiro.au> ;
+.
+<http://network.csiro.au/data/nicholas.car>
+  rdf:type prov:Person ;
+  rdfs:label "Nicholas Car" ;
+  foaf:mbox <mailto:nicholas.car@csiro.au> ;
+.
+<http://network.csiro.au/data/paul.j.box>
+  rdf:type prov:Person ;
+  rdfs:label "Paul Box" ;
+  org:memberOf orgunit:EII ;
+  foaf:mbox <mailto:paul.j.box@csiro.au> ;
+.
+<http://network.csiro.au/data/peter.fitch>
+  rdf:type prov:Person ;
+  rdfs:label "Peter Fitch" ;
+  foaf:mbox <mailto:peter.fitch@csiro.au> ;
+.
+<http://network.csiro.au/data/peter.wilson>
+  rdf:type prov:Person ;
+  rdfs:label "Peter Wilson" ;
+  foaf:mbox <mailto:peter.wilson@csiro.au> ;
+.
+<http://network.csiro.au/data/sally.tetreault-campbell>
+  rdf:type prov:Person ;
+  rdfs:label "Sally Tetreault-Campbell" ;
+  org:memberOf orgunit:EII ;
+  foaf:mbox <mailto:sally.tetreault-campbell@csiro.au> ;
+.
+<http://network.csiro.au/data/simon.cox>
+  rdf:type prov:Person ;
+  rdfs:label "Simon J D Cox" ;
+  org:headOf orgunit:EII ;
+  org:memberOf orgunit:EII ;
+  foaf:account <http://www.researcherid.com/rid/C-5791-2011> ;
+  foaf:account <https://orcid.org/0000-0002-3884-3420> ;
+  foaf:account <https://scholar.google.com.au/citations?user=4ju7O2AAAAAJ> ;
+  foaf:familyName "Cox" ;
+  foaf:gender "male" ;
+  foaf:givenName "Simon Jonathan David" ;
+  foaf:img <http://people.csiro.au/~/media/People%20Finder/C/S/Simon-Cox/Simon-Cox> ;
+  foaf:isPrimaryTopicOf <http://people.csiro.au/C/S/Simon-Cox> ;
+  foaf:made <http://www.opengeospatial.org/standards/gml> ;
+  foaf:made <http://www.opengeospatial.org/standards/om> ;
+  foaf:made <https://www.iso.org/standard/32574.html> ;
+  foaf:made <https://www.iso.org/standard/59193.html> ;
+  foaf:made <https://www.w3.org/TR/owl-time/> ;
+  foaf:made <https://www.w3.org/TR/vocab-ssn/> ;
+  foaf:mbox <mailto:simon.cox@csiro.au> ;
+  foaf:name "Simon Cox" ;
+  foaf:openid <https://plus.google.com/+SimonCox1959> ;
+  foaf:phone <tel:+61395452365> ;
+  foaf:publications <http://orcid.org/0000-0002-3884-3420> ;
+  foaf:publications <http://scholar.google.com.au/citations?user=4ju7O2AAAAAJ> ;
+  foaf:publications <http://www.researcherid.com/rid/C-5791-2011> ;
+  foaf:title "Dr" ;
+  foaf:workplaceHomepage <https://people.csiro.au/C/S/Simon-Cox> ;
+.
+<http://network.csiro.au/data/warwick.mcdonald>
+  rdf:type prov:Person ;
+  rdfs:label "Warwick McDonald" ;
+  org:headOf orgunit:WRM ;
+  foaf:mbox <mailto:warwick.mcdonald@csiro.au> ;
+.
+prov:Person
+  rdfs:subClassOf foaf:Person ;
 .
