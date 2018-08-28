@@ -39,7 +39,7 @@ eii:AURIN
   prov:wasAttributedTo <http://network.csiro.au/data/ben.leighton> ;
   prov:wasAttributedTo <http://network.csiro.au/data/jonathan.yu> ;
 .
-eii:C
+eii:C-sharp
   rdf:type eii:Technology ;
   dct:relation eii:PlannedBurnsToolkit ;
   rdfs:label "C# Programming Language" ;
@@ -74,6 +74,7 @@ eii:DCAT-2014
 .
 eii:DCAT-rev
   rdf:type eii:Technology ;
+  dct:contributor <http://network.csiro.au/data/simon.cox> ;
   rdfs:label "W3C Data Catalog - revision" ;
   prov:wasAttributedTo xorg:DXWG ;
   prov:wasAttributedTo xorg:W3C ;
@@ -153,6 +154,13 @@ eii:OBO
   rdf:type eii:Technology ;
   rdfs:label "OBO Foundry biomedical ontologies" ;
   foaf:homepage <http://www.obofoundry.org/> ;
+.
+eii:OWL-Time
+  rdf:type eii:Technology ;
+  dct:creator <http://network.csiro.au/data/simon.cox> ;
+  rdfs:label "Time Ontology in OWL" ;
+  prov:wasAttributedTo xorg:W3C ;
+  foaf:homepage <https://www.w3.org/TR/owl-time/> ;
 .
 eii:OandM
   rdf:type eii:Technology ;
@@ -248,6 +256,7 @@ eii:SKOS
 .
 eii:SOSA
   rdf:type eii:Technology ;
+  dct:contributor <http://network.csiro.au/data/simon.cox> ;
   rdfs:label "W3C Sensors Observations Sampling and Actuation vocabulary" ;
   prov:wasAttributedTo xorg:W3C ;
   prov:wasDerivedFrom eii:OandM ;
@@ -255,6 +264,7 @@ eii:SOSA
 .
 eii:SSN
   rdf:type eii:Technology ;
+  dct:contributor <http://network.csiro.au/data/simon.cox> ;
   rdfs:label "W3C Semantic Sensor Network Ontology" ;
   prov:wasAttributedTo xorg:W3C ;
   prov:wasDerivedFrom eii:SOSA ;
@@ -270,6 +280,7 @@ eii:SSN-ext
 .
 eii:SWEET
   rdf:type eii:Technology ;
+  dct:contributor <http://network.csiro.au/data/simon.cox> ;
   rdfs:label "Semantic Web for Earth and Environmental Terminology " ;
   prov:wasAttributedTo xorg:ESIP ;
   prov:wasAttributedTo xorg:NASA ;
@@ -278,14 +289,22 @@ eii:SWEET
 eii:Social-Architecture
   rdf:type eii:Technology ;
   rdfs:label "Principles of social and economic structures" ;
+  prov:wasAttributedTo <http://network.csiro.au/data/paul.j.box> ;
 .
 eii:Technology
   rdf:type owl:Class ;
   rdfs:label "Technology or component" ;
   rdfs:subClassOf prov:Entity ;
 .
+eii:W3-ORG
+  rdf:type eii:Technology ;
+  rdfs:label "W3C Organization Ontology" ;
+  prov:wasAttributedTo xorg:W3C ;
+  foaf:homepage <https://www.w3.org/TR/vocab-org/> ;
+.
 eii:e2ldr
   rdf:type eii:Technology ;
+  dct:creator <http://network.csiro.au/data/jonathan.yu> ;
   rdfs:label "Excel2LDR" ;
   prov:wasAttributedTo orgunit:EII ;
 .
@@ -553,6 +572,7 @@ project:ASRIS
       adms:schemeAgency "CSIRO SAP" ;
     ] ;
   proj:hasLeader <http://network.csiro.au/data/peter.wilson> ;
+  proj:hasParticipant <http://network.csiro.au/data/linda.gregory> ;
   proj:hasParticipant <http://network.csiro.au/data/simon.cox> ;
   prov:used eii:RegistryItCSIRO ;
   prov:used eii:SKOS ;
@@ -686,6 +706,15 @@ project:LOC-I
   proj:hasSponsor xorg:ABS ;
   prov:used eii:Social-Architecture ;
 .
+project:Long-spine
+  rdf:type proj:Project ;
+  rdfs:label "Longitudinal Spine" ;
+  proj:hasParticipant <http://network.csiro.au/data/nicholas.car> ;
+  proj:hasParticipant <http://network.csiro.au/data/simon.cox> ;
+  prov:used eii:OWL-Time ;
+  prov:used eii:PROV-O ;
+  prov:used eii:W3-ORG ;
+.
 project:NAWRA
   rdf:type proj:Project ;
   rdfs:label "Northern Australia Water Resource Assessment" ;
@@ -725,44 +754,66 @@ project:SeaDataCloud
   rdf:type prov:Person ;
   rdfs:label "Ben Leighton" ;
   org:memberOf orgunit:EII ;
+  org:reportsTo <http://network.csiro.au/data/simon.cox> ;
   foaf:mbox <mailto:ben.leighton@csiro.au> ;
 .
 <http://network.csiro.au/data/david.lemon>
   rdf:type prov:Person ;
   rdfs:label "David Lemon" ;
   org:headOf orgunit:EI ;
+  org:reportsTo <http://network.csiro.au/data/warwick.mcdonald> ;
   foaf:mbox <mailto:david.lemon@csiro.au> ;
+.
+<http://network.csiro.au/data/francis.chiew>
+  rdf:type prov:Person ;
+  rdfs:label "Francis Chiew" ;
+  org:reportsTo <http://network.csiro.au/data/warwick.mcdonald> ;
+.
+<http://network.csiro.au/data/jane.coram>
+  rdf:type prov:Person ;
+  rdfs:label "Jane Coram" ;
 .
 <http://network.csiro.au/data/jean-michel.perraud>
   rdf:type prov:Person ;
   rdfs:label "Jean-Michel Perraud" ;
+  org:reportsTo <http://network.csiro.au/data/david.lemon> ;
   foaf:mbox <mailto:jean-michel.perraud@csiro.au> ;
 .
 <http://network.csiro.au/data/jonathan.yu>
   rdf:type prov:Person ;
   rdfs:label "Jonathan Yu" ;
   org:memberOf orgunit:EII ;
+  org:reportsTo <http://network.csiro.au/data/simon.cox> ;
   foaf:mbox <mailto:jonathan.yu@csiro.au> ;
+.
+<http://network.csiro.au/data/linda.gregory>
+  rdf:type prov:Person ;
+  rdfs:label "Linda Gregory" ;
+  org:reportsTo <http://network.csiro.au/data/peter.wilson> ;
 .
 <http://network.csiro.au/data/matthew.stenson>
   rdf:type prov:Person ;
   rdfs:label "Matt Stenson" ;
+  org:reportsTo <http://network.csiro.au/data/david.lemon> ;
   foaf:mbox <mailto:matthew.stenson@csiro.au> ;
 .
 <http://network.csiro.au/data/nicholas.car>
   rdf:type prov:Person ;
   rdfs:label "Nicholas Car" ;
+  org:reportsTo <http://network.csiro.au/data/matthew.stenson> ;
   foaf:mbox <mailto:nicholas.car@csiro.au> ;
 .
 <http://network.csiro.au/data/paul.j.box>
   rdf:type prov:Person ;
   rdfs:label "Paul Box" ;
   org:memberOf orgunit:EII ;
+  org:reportsTo <http://network.csiro.au/data/simon.cox> ;
   foaf:mbox <mailto:paul.j.box@csiro.au> ;
 .
 <http://network.csiro.au/data/peter.fitch>
   rdf:type prov:Person ;
   rdfs:label "Peter Fitch" ;
+  org:reportsTo <http://network.csiro.au/data/david.lemon> ;
   foaf:mbox <mailto:peter.fitch@csiro.au> ;
 .
 <http://network.csiro.au/data/peter.wilson>
@@ -774,6 +825,7 @@ project:SeaDataCloud
   rdf:type prov:Person ;
   rdfs:label "Sally Tetreault-Campbell" ;
   org:memberOf orgunit:EII ;
+  org:reportsTo <http://network.csiro.au/data/simon.cox> ;
   foaf:mbox <mailto:sally.tetreault-campbell@csiro.au> ;
 .
 <http://network.csiro.au/data/simon.cox>
@@ -781,6 +833,7 @@ project:SeaDataCloud
   rdfs:label "Simon J D Cox" ;
   org:headOf orgunit:EII ;
   org:memberOf orgunit:EII ;
+  org:reportsTo <http://network.csiro.au/data/david.lemon> ;
   foaf:account <http://www.researcherid.com/rid/C-5791-2011> ;
   foaf:account <https://orcid.org/0000-0002-3884-3420> ;
   foaf:account <https://scholar.google.com.au/citations?user=4ju7O2AAAAAJ> ;
@@ -809,6 +862,7 @@ project:SeaDataCloud
   rdf:type prov:Person ;
   rdfs:label "Warwick McDonald" ;
   org:headOf orgunit:WRM ;
+  org:reportsTo <http://network.csiro.au/data/jane.coram> ;
   foaf:mbox <mailto:warwick.mcdonald@csiro.au> ;
 .
 prov:Person
